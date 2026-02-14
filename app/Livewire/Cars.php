@@ -11,8 +11,8 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 #[Layout('layouts.app')]
-#[Title('Premium Japanese Car Imports - Xplore Car Imports')]
-class Search extends Component
+#[Title('Browse Import Cars - Xplore Car Imports')]
+class Cars extends Component
 {
     use WithPagination;
 
@@ -23,19 +23,25 @@ class Search extends Component
     public $make = '';
 
     #[Url]
+    public $transmission = '';
+
+    #[Url]
+    public $fuelType = '';
+
+    #[Url]
+    public $sortBy = 'newest';
+
+    #[Url]
     public $minPrice = '';
 
     #[Url]
     public $maxPrice = '';
 
     #[Url]
-    public $year = 2019;
+    public $minYear = '';
 
     #[Url]
-    public $transmission = '';
-
-    #[Url]
-    public $fuelType = '';
+    public $maxYear = '';
 
     public function updatingSearch()
     {
@@ -47,9 +53,24 @@ class Search extends Component
         $this->resetPage();
     }
 
+    public function updatingTransmission()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingFuelType()
+    {
+        $this->resetPage();
+    }
+
+    public function updatingSortBy()
+    {
+        $this->resetPage();
+    }
+
     public function resetFilters()
     {
-        $this->reset(['search', 'make', 'minPrice', 'maxPrice', 'year', 'transmission', 'fuelType']);
+        $this->reset(['search', 'make', 'transmission', 'fuelType', 'sortBy', 'minPrice', 'maxPrice', 'minYear', 'maxYear']);
         $this->resetPage();
     }
 
@@ -71,7 +92,8 @@ class Search extends Component
         if ($this->search) {
             $query->where(function ($q) {
                 $q->where('make', 'like', '%' . $this->search . '%')
-                    ->orWhere('model', 'like', '%' . $this->search . '%');
+                    ->orWhere('model', 'like', '%' . $this->search . '%')
+                    ->orWhere('vin_number', 'like', '%' . $this->search . '%');
             });
         }
 
@@ -90,9 +112,6 @@ class Search extends Component
             $query->where('fuel_type', $this->fuelType);
         }
 
-        // Year filter
-        $query->where('year_of_reg', '>=', $this->year);
-
         // Price range filter
         if ($this->minPrice) {
             $query->where('cif_price', '>=', $this->minPrice);
@@ -101,12 +120,40 @@ class Search extends Component
             $query->where('cif_price', '<=', $this->maxPrice);
         }
 
-        // Order by newest
-        $query->latest();
+        // Year range filter
+        if ($this->minYear) {
+            $query->where('year_of_reg', '>=', $this->minYear);
+        }
+        if ($this->maxYear) {
+            $query->where('year_of_reg', '<=', $this->maxYear);
+        }
+
+        // Sorting
+        switch ($this->sortBy) {
+            case 'price_low':
+                $query->orderBy('cif_price', 'asc');
+                break;
+            case 'price_high':
+                $query->orderBy('cif_price', 'desc');
+                break;
+            case 'year_new':
+                $query->orderBy('year_of_reg', 'desc');
+                break;
+            case 'year_old':
+                $query->orderBy('year_of_reg', 'asc');
+                break;
+            case 'mileage_low':
+                $query->orderBy('mileage', 'asc');
+                break;
+            case 'newest':
+            default:
+                $query->latest();
+                break;
+        }
 
         $cars = $query->paginate(12);
 
-        return view('livewire.search', [
+        return view('livewire.cars', [
             'cars' => $cars,
         ]);
     }

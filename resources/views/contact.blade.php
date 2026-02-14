@@ -1,7 +1,7 @@
 @extends('layouts.app', ['title' => 'Contact Us - Xplore Car Imports'])
 
 @section('content')
-<div class="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-slate-100 min-h-screen">
+<div class="bg-linear-to-br from-blue-950 via-blue-900 to-blue-800 text-slate-100 min-h-screen">
     <div class="max-w-7xl mx-auto px-6 py-16">
         <div class="text-center mb-16">
             <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber-400 mb-4">Get In Touch</p>
@@ -99,13 +99,14 @@
         </div>
 
         <!-- FAQ Section -->
-        <div class="mt-16">
+        <div class="mt-16 rounded-3xl bg-white/10 border border-white/10 backdrop-blur p-8 md:p-12">
             <div class="text-center mb-12">
                 <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber-400 mb-4">Questions?</p>
                 <h2 class="text-3xl md:text-4xl font-bold mb-2">Frequently Asked Questions</h2>
                 <p class="text-slate-300">Find answers to common questions about our import process, requirements, and services.</p>
             </div>
-            <div class="space-y-3">
+
+            <div class="space-y-3 ">
                 <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
                     <input type="radio" name="faq" checked />
                     <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
@@ -132,7 +133,7 @@
                         3. How long does the importation process take?
                     </div>
                     <div class="collapse-content bg-white/5 text-slate-300">
-                        <p class="pt-4">The average timeline is 6–8 weeks depending on the country of origin, shipping schedules, and customs clearance procedures.</p>
+                        <p class="pt-4">The average timeline is 6-8 weeks depending on the country of origin, shipping schedules, and customs clearance procedures.</p>
                     </div>
                 </div>
 
@@ -227,6 +228,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 
     @include('partials.footer')

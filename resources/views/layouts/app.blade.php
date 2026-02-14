@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="w-full min-h-screen flex flex-col bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-slate-100 antialiased" style="font-family: 'Google Sans Code', sans-serif;">
+<body class="w-full min-h-screen flex flex-col bg-linear-to-br from-blue-950 via-blue-900 to-blue-800 text-blue-100 antialiased" style="font-family: 'Google Sans Code', sans-serif;">
 
     <!-- Navigation -->
     @include('partials.navbar')

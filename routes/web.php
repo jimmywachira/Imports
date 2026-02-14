@@ -2,12 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Search;
+use App\Livewire\Cars;
+use App\Livewire\CarDetails;
+use App\Livewire\Admin\Dashboard;
+use App\Livewire\Admin\VehicleManagement;
+use App\Livewire\Admin\VehicleCreate;
+use App\Livewire\Admin\VehicleEdit;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('home');
+Route::redirect('/', '/cars')->name('home');
 
-Route::get('/', Search::class)->name('cars');
+// Public Routes
+Route::get('/', Search::class)->name('search');
+Route::get('/cars', Cars::class)->name('cars');
+Route::get('/cars/{slug}', CarDetails::class)->name('car.details');
 
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
@@ -19,8 +26,19 @@ Route::view('/advisory', 'advisory')->name('advisory');
 Route::view('/privacy-policy', 'privacy')->name('privacy');
 Route::view('/terms-of-service', 'terms')->name('terms');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+// Admin Routes (Protected)
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    
+    // Vehicle Management
+    Route::get('/vehicles', VehicleManagement::class)->name('vehicles.index');
+    Route::get('/vehicles/create', VehicleCreate::class)->name('vehicles.create');
+    Route::get('/vehicles/{id}/edit', VehicleEdit::class)->name('vehicles.edit');
+});
+
+// Old Dashboard Route (Redirect to Admin Dashboard)
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::redirect('/dashboard', '/admin/dashboard')->name('dashboard');
+});
 
 require __DIR__.'/settings.php';

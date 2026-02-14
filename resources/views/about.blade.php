@@ -66,6 +66,137 @@
         </div>
     </div>
 
+    <!-- FAQ Section -->
+        <div class="mt-16 rounded-3xl bg-white/10 border border-white/10 backdrop-blur p-8 md:p-12">
+            <div class="text-center mb-12">
+                <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber-400 mb-4">Questions?</p>
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">Frequently Asked Questions</h2>
+                <p class="text-slate-300">Find answers to common questions about our import process, requirements, and services.</p>
+            </div>
+
+            <div class="space-y-3 ">
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" checked />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        1. How does car importation work?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">We help you source your preferred vehicle from overseas dealers, handle the purchase, shipping, and clearance at the port before delivery to you.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        2. What documents are required to import a car?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">You'll need a valid national ID or passport, KRA PIN certificate, and proof of purchase. We'll assist you with customs clearance documents as well.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        3. How long does the importation process take?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">The average timeline is 6–8 weeks depending on the country of origin, shipping schedules, and customs clearance procedures.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        4. Do I have to pay the full amount upfront?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">No. We offer flexible payment options where you can pay a deposit to initiate the process, with the balance payable upon delivery.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        5. Are there additional hidden costs?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">No. We provide a transparent quotation upfront, including shipping, customs duty, port charges, and clearance fees.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        6. Can I track my vehicle during shipping?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">Yes, we provide shipping details and updates so you can track your vehicle until it arrives in Kenya.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        7. What types of vehicles can I import?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">We help you import cars, SUVs, vans, trucks, and even specialized vehicles, as long as they meet KEBS age and standards requirements.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        8. Are imported cars inspected before arrival?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">Yes. All vehicles must pass a pre-shipment inspection (PSI) to ensure they meet safety and environmental standards.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        9. Can I finance my imported car?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">We work with financial partners who can offer car import financing solutions depending on eligibility.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        10. Do imported vehicles come with a warranty?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">Yes, some vehicles may come with manufacturer or dealer warranties, and we can guide you on extended warranty options.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        11. What happens if my car is damaged during shipping?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">All vehicles are insured during transit. In case of damage, insurance claims can be made to cover the loss.</p>
+                    </div>
+                </div>
+
+                <div class="collapse collapse-plus bg-white/10 border border-white/10 backdrop-blur rounded-lg">
+                    <input type="radio" name="faq" />
+                    <div class="collapse-title text-lg font-semibold text-slate-100 py-4">
+                        12. Can you help me register the car once it arrives?
+                    </div>
+                    <div class="collapse-content bg-white/5 text-slate-300">
+                        <p class="pt-4">Absolutely. We assist with NTSA registration, number plate issuance, and roadworthiness certification.</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
     {{-- Core Values --}}
     <div class="max-w-7xl mx-auto px-6 py-16">
         <div class="text-center mb-12">
