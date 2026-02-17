@@ -108,6 +108,9 @@ class Search extends Component
 
         return view('livewire.search', [
             'cars' => $cars,
+        ])->layoutData([
+            'description' => 'Search Japan direct import cars in Kenya by make, price, and year. KEBS compliant vehicles with inspection reports and shipping support.',
+            'keywords' => 'car imports, import cars, Japan direct imports, car shipping, KEBS compliant cars, import car dealership',
         ]);
     }
 }

@@ -48,6 +48,15 @@ class CarDetails extends Component
 
     public function render()
     {
+        $description = sprintf(
+            'View %s (%s) with %s transmission, %s engine, and CIF price %s. Available for import in Kenya with inspection and shipping support.',
+            $this->car->full_name,
+            $this->car->year_of_reg,
+            $this->car->transmission,
+            $this->car->engine_capacity,
+            $this->car->formatted_price
+        );
+
         // Get similar cars (same make, different model or similar price range)
         $similarCars = Vehicle::query()
             ->available()
@@ -65,6 +74,10 @@ class CarDetails extends Component
         return view('livewire.car-details', [
             'similarCars' => $similarCars,
             'pageTitle' => $this->car->full_name . ' - Xplore Car Imports',
+        ])->layoutData([
+            'title' => $this->car->full_name . ' - Xplore Car Imports',
+            'description' => $description,
+            'keywords' => 'import cars, Japan car imports, ' . $this->car->make . ', ' . $this->car->model . ', CIF price, Kenya car imports',
         ]);
     }
 }

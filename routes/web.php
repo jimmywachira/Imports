@@ -8,6 +8,7 @@ use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\VehicleManagement;
 use App\Livewire\Admin\VehicleCreate;
 use App\Livewire\Admin\VehicleEdit;
+use App\Models\Vehicle;
 
 Route::redirect('/', '/cars')->name('home');
 
@@ -25,6 +26,31 @@ Route::view('/trade-in-program', 'tradein')->name('tradein');
 Route::view('/advisory', 'advisory')->name('advisory');
 Route::view('/privacy-policy', 'privacy')->name('privacy');
 Route::view('/terms-of-service', 'terms')->name('terms');
+
+Route::get('/sitemap.xml', function () {
+    $staticUrls = array_values(array_unique([
+        url('/'),
+        route('cars'),
+        route('about'),
+        route('contact'),
+        route('inspection'),
+        route('shipping'),
+        route('history'),
+        route('tradein'),
+        route('advisory'),
+        route('privacy'),
+        route('terms'),
+    ]));
+
+    $vehicles = Vehicle::query()
+        ->where('is_available', true)
+        ->latest('updated_at')
+        ->get(['slug', 'updated_at']);
+
+    return response()
+        ->view('sitemap', compact('staticUrls', 'vehicles'))
+        ->header('Content-Type', 'application/xml');
+})->name('sitemap');
 
 // Admin Routes (Protected)
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {

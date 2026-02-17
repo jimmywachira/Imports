@@ -1,20 +1,20 @@
-<div class="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-slate-100">
-    <div class="max-w-7xl mx-auto px-6 py-12">
+<div class="page-shell">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12">
         <!-- Hero Header -->
-        <header class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-400 via-yellow-300 to-lime-200 text-blue-900 shadow-2xl mb-12">
+        <header class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-400 via-yellow-300 to-lime-200 text-blue-900 shadow-2xl mb-8 sm:mb-12">
             <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_rgba(0,0,0,0.5),_transparent_60%)]"></div>
-            <div class="relative p-8 md:p-12">
-                <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-                    <div class="space-y-3">
+            <div class="relative p-6 sm:p-8 lg:p-12">
+                <div class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:items-center lg:justify-between">
+                    <div class="space-y-2 sm:space-y-3">
                         <p class="uppercase tracking-[0.2em] text-xs font-semibold">Japan Direct Imports</p>
-                        <h1 class="text-4xl md:text-5xl font-extrabold">Find Your Dream Import</h1>
-                        <p class="text-blue-800 max-w-2xl">Verified 2019+ Japanese vehicles, clean history, and transparent CIF pricing tailored for the Kenyan market.</p>
+                        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Find Your Dream Import</h1>
+                        <p class="text-xs sm:text-base text-blue-800 max-w-2xl">Verified 2019+ Japanese vehicles, clean history, and transparent CIF pricing tailored for the Kenyan market.</p>
                     </div>
                     <div class="flex flex-col gap-2">
-                        <div class="stats shadow bg-blue-900/50 backdrop-blur">
+                        <div class="stats font-extrabold text-sm sm:text-base">
                             <div class="stat place-items-center">
-                                <div class="stat-value text-amber-300 text-3xl">{{ $cars->total() }}</div>
-                                <div class="stat-desc text-yellow-100">Available Cars</div>
+                                <div class="stat-value text-blue-300 text-2xl sm:text-3xl">{{ $cars->total() }}</div>
+                                <div class="stat-desc text-blue-500 text-xs sm:text-sm">Available Cars</div>
                             </div>
                         </div>
                     </div>
@@ -22,30 +22,43 @@
             </div>
         </header>
 
+        <section class="glass-panel p-6 mb-6 sm:mb-8">
+            <h2 class="text-lg sm:text-xl font-semibold mb-2">Japan Car Imports in Kenya</h2>
+            <p class="ui-muted text-sm sm:text-base">
+                Explore KEBS-compliant import cars from Japan with verified inspection reports, transparent CIF pricing, and
+                end-to-end shipping and customs clearing support.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm">
+                <a href="{{ route('inspection') }}" class="text-amber-400 hover:text-amber-300 font-medium line-clamp-1">Inspection Reports</a>
+                <a href="{{ route('shipping') }}" class="text-amber-400 hover:text-amber-300 font-medium line-clamp-1">Shipping & Clearing</a>
+                <a href="{{ route('tradein') }}" class="text-amber-400 hover:text-amber-300 font-medium line-clamp-1">Trade-In Program</a>
+            </div>
+        </section>
+
         <!-- Filters Section -->
-        <div class="rounded-2xl bg-white/10 border border-white/10 backdrop-blur p-6 mb-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+        <div class="glass-panel border-amber-300 border-2 rounded p-6 mb-6 sm:mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4">
                 <!-- Search -->
                 <div class="form-control">
                     <label class="label">
-                        <span class="label-text text-slate-200">Search</span>
+                        <span class="label-text ui-label text-xs sm:text-sm">Search</span>
                     </label>
                     <input 
                         type="text" 
                         wire:model.live.debounce.300ms="search" 
                         placeholder="Make, Model, VIN..." 
-                        class="input input-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-input p-2 text-sm"
                     />
                 </div>
 
                 <!-- Make Filter -->
                 <div class="form-control">
                     <label class="label">
-                        <span class="label-text text-slate-200">Make</span>
+                        <span class="label-text ui-label text-xs sm:text-sm">Make</span>
                     </label>
                     <select 
                         wire:model.live="make" 
-                        class="select select-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-select p-2 text-sm"
                     >
                         <option value="">All Makes</option>
                         @foreach($this->makes as $makeName)
@@ -57,11 +70,11 @@
                 <!-- Transmission Filter -->
                 <div class="form-control">
                     <label class="label">
-                        <span class="label-text text-slate-200">Transmission</span>
+                        <span class="label-text ui-label text-xs sm:text-sm">Transmission</span>
                     </label>
                     <select 
                         wire:model.live="transmission" 
-                        class="select select-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-select p-2 text-sm"
                     >
                         <option value="">All Types</option>
                         <option value="Automatic">Automatic</option>
@@ -72,11 +85,11 @@
                 <!-- Fuel Type Filter -->
                 <div class="form-control">
                     <label class="label">
-                        <span class="label-text text-slate-200">Fuel Type</span>
+                        <span class="label-text ui-label text-xs sm:text-sm">Fuel Type</span>
                     </label>
                     <select 
                         wire:model.live="fuelType" 
-                        class="select select-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-select p-2 text-sm"
                     >
                         <option value="">All Types</option>
                         <option value="Petrol">Petrol</option>
@@ -88,7 +101,7 @@
                 <!-- Min Year -->
                 <div class="form-control">
                     <label class="label">
-                        <span class="label-text text-slate-200">Min Year</span>
+                        <span class="label-text ui-label text-xs sm:text-sm">Min Year</span>
                     </label>
                     <input 
                         type="number" 
@@ -96,14 +109,14 @@
                         placeholder="2019" 
                         min="2019"
                         max="2026"
-                        class="input input-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-input text-sm"
                     />
                 </div>
 
                 <!-- Max Year -->
                 <div class="form-control">
                     <label class="label">
-                        <span class="label-text text-slate-200">Max Year</span>
+                        <span class="label-text ui-label text-xs sm:text-sm">Max Year</span>
                     </label>
                     <input 
                         type="number" 
@@ -111,46 +124,46 @@
                         placeholder="2026" 
                         min="2019"
                         max="2026"
-                        class="input input-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-input text-sm"
                     />
                 </div>
 
                 <!-- Min Price -->
                 <div class="form-control">
                     <label class="label">
-                        <span class="label-text text-slate-200">Min Price (KES)</span>
+                        <span class="label-text ui-label text-xs sm:text-sm">Min Price (KES)</span>
                     </label>
                     <input 
                         type="number" 
                         wire:model.live.debounce.300ms="minPrice" 
                         placeholder="500000" 
-                        class="input input-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-input p-2 text-sm"
                     />
                 </div>
 
                 <!-- Max Price -->
                 <div class="form-control">
                     <label class="label">
-                        <span class="label-text text-slate-200">Max Price (KES)</span>
+                        <span class="label-text ui-label text-xs sm:text-sm">Max Price (KES)</span>
                     </label>
                     <input 
                         type="number" 
                         wire:model.live.debounce.300ms="maxPrice" 
                         placeholder="5000000" 
-                        class="input input-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-input p-2 text-sm"
                     />
                 </div>
             </div>
 
             <!-- Sort and Reset -->
-            <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
-                <div class="form-control w-full md:w-64">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start sm:items-center justify-between">
+                <div class="form-control w-full sm:w-auto sm:max-w-xs">
                     <label class="label">
-                        <span class="label-text text-slate-200">Sort By</span>
+                        <span class="label-text ui-label text-xs sm:text-sm">Sort By</span>
                     </label>
                     <select 
                         wire:model.live="sortBy" 
-                        class="select select-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-select p-2 text-sm"
                     >
                         <option value="newest">Newest First</option>
                         <option value="price_low">Price: Low to High</option>
@@ -163,7 +176,7 @@
 
                 <button 
                     wire:click="resetFilters" 
-                    class="btn btn-outline border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-blue-900 hover:border-amber-400"
+                    class="btn-outline-amber text-sm w-full sm:w-auto"
                 >
                     <ion-icon name="refresh-outline" class="text-lg"></ion-icon>
                     Reset Filters
@@ -172,8 +185,8 @@
         </div>
 
         <!-- Results Count -->
-        <div class="mb-6">
-            <p class="text-slate-300">
+        <div class="mb-4 sm:mb-6">
+            <p class="ui-muted text-xs sm:text-sm">
                 Showing <span class="font-semibold text-amber-300">{{ $cars->firstItem() ?? 0 }}</span> 
                 to <span class="font-semibold text-amber-300">{{ $cars->lastItem() ?? 0 }}</span> 
                 of <span class="font-semibold text-amber-300">{{ $cars->total() }}</span> results
@@ -182,65 +195,65 @@
 
         <!-- Cars Grid -->
         @if($cars->count() > 0)
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 @foreach($cars as $car)
-                    <div class="group bg-white/10 border border-white/10 backdrop-blur rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="ui-card border-amber-300 border-2">
                         <!-- Image -->
-                        <div class="relative overflow-hidden h-56">
+                        <div class="relative overflow-hidden h-40 sm:h-48 lg:h-56 ">
                             <img 
                                 class="h-full w-full object-cover group-hover:scale-110 transition-transform duration-300" 
                                 src="{{ $car->primary_image }}" 
                                 alt="{{ $car->full_name }}" 
                                 loading="lazy"
                             />
-                            <div class="absolute top-3 left-3 flex flex-col gap-2">
-                                <span class="badge badge-accent font-semibold">{{ $car->auction_grade }} Grade</span>
-                                <span class="badge badge-warning">{{ $car->fuel_type }}</span>
+                            <div class="absolute top-2 sm:top-3 left-2 sm:left-3 flex flex-col gap-1 sm:gap-2">
+                                <span class="badge badge-accent font-semibold text-xs sm:text-sm">{{ $car->auction_grade }} Grade</span>
+                                <span class="badge badge-warning text-xs sm:text-sm">{{ $car->fuel_type }}</span>
                             </div>
                             @if(!$car->is_available)
-                                <div class="absolute inset-0 bg-slate-900/70 flex items-center justify-center">
+                                <div class="absolute inset-0 bg-slate-900/70 flex items-center justify-center dark:bg-slate-900/70">
                                     <span class="badge badge-error badge-lg">SOLD</span>
                                 </div>
                             @endif
                         </div>
 
                         <!-- Content -->
-                        <div class="p-5">
-                            <h3 class="text-lg font-bold mb-2 text-slate-100 line-clamp-1">
+                        <div class="p-4 sm:p-5 backdrop-blur-2xl bg-white/10 rounded-b-xl hover:bg-white/20 transition-colors">
+                            <h3 class="text-sm sm:text-lg font-bold mb-2 ui-title line-clamp-1">
                                 {{ $car->full_name }}
                             </h3>
                             
                             <!-- Specs -->
-                            <div class="flex flex-wrap gap-2 mb-4 text-sm text-slate-300">
-                                <span class="flex items-center gap-1">
-                                    <ion-icon name="speedometer-outline"></ion-icon>
+                            <div class="flex flex-wrap p-2 gap-1 sm:gap-2 mb-4 text-xs ui-muted">
+                                <span class="flex items-center gap-1 line-clamp-1">
+                                    <ion-icon name="speedometer-outline" class="text-sm sm:text-base"></ion-icon>
                                     {{ $car->formatted_mileage }}
                                 </span>
-                                <span class="flex items-center gap-1">
-                                    <ion-icon name="settings-outline"></ion-icon>
+                                <span class="flex items-center gap-1 line-clamp-1">
+                                    <ion-icon name="settings-outline" class="text-sm sm:text-base"></ion-icon>
                                     {{ $car->transmission }}
                                 </span>
-                                <span class="flex items-center gap-1">
-                                    <ion-icon name="flash-outline"></ion-icon>
+                                <span class="flex items-center gap-1 line-clamp-1">
+                                    <ion-icon name="flash-outline" class="text-sm sm:text-base"></ion-icon>
                                     {{ $car->engine_capacity }}
                                 </span>
                             </div>
 
                             <!-- Price and Action -->
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <p class="text-xs text-slate-400 mb-1">CIF Price</p>
-                                    <p class="text-2xl font-bold text-amber-300">
+                            <div class="flex items-start sm:items-center justify-between gap-2">
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-xs text-slate-400 mb-0.5">CIF Price</p>
+                                    <p class="text-lg sm:text-2xl font-bold text-amber-300 line-clamp-1">
                                         {{ $car->formatted_price }}
                                     </p>
                                 </div>
                                 <a 
                                     href="{{ route('car.details', $car->slug) }}" 
                                     wire:navigate
-                                    class="btn btn-sm px-3 py-2 rounded-full bg-amber-400 text-blue-900 border-none hover:bg-amber-300 group-hover:scale-110 transition-transform"
+                                    class="btn-pill-amber bg-amber-500 p-2 rounded sm:text-sm flex-shrink-0 whitespace-nowrap"
                                 >
+                                   <span class="">View Details</span>
                                     
-                                    View Details
                                 </a>
                             </div>
                         </div>
@@ -249,18 +262,18 @@
             </div>
 
             <!-- Pagination -->
-            <div class="flex justify-center">
+            <div class="flex justify-center overflow-x-auto">
                 {{ $cars->links() }}
             </div>
         @else
             <!-- Empty State -->
-            <div class="flex flex-col items-center justify-center py-20 rounded-2xl bg-white/10 border border-white/10 backdrop-blur">
-                <ion-icon name="car-outline" class="text-6xl text-slate-400 mb-4"></ion-icon>
-                <h3 class="text-2xl font-bold mb-2">No Cars Found</h3>
-                <p class="text-slate-300 mb-6">Try adjusting your filters to see more results</p>
+            <div class="ui-empty">
+                <ion-icon name="car-outline" class="text-5xl sm:text-6xl text-slate-400 mb-4"></ion-icon>
+                <h3 class="text-xl sm:text-2xl font-bold mb-2">No Cars Found</h3>
+                <p class="ui-muted mb-4 sm:mb-6 text-sm sm:text-base">Try adjusting your filters to see more results</p>
                 <button 
                     wire:click="resetFilters" 
-                    class="btn bg-amber-400 text-blue-900 border-none hover:bg-amber-300"
+                    class="btn-primary text-sm sm:text-base"
                 >
                     Reset All Filters
                 </button>

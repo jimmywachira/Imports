@@ -1,15 +1,15 @@
-<div class="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-slate-100">
+<div class="page-shell">
     <div class="max-w-7xl mx-auto px-6 py-12">
         <!-- Header -->
         <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
             <div>
                 <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Manage Vehicles</h1>
-                <p class="text-slate-300">View, edit, and manage all vehicle listings</p>
+                <p class="ui-muted">View, edit, and manage all vehicle listings</p>
             </div>
             <div class="mt-4 md:mt-0">
                 <a 
                     href="{{ route('admin.vehicles.create') }}" 
-                    class="btn bg-amber-400 text-blue-900 border-none hover:bg-amber-300"
+                    class="btn-primary"
                 >
                     <ion-icon name="add-circle-outline" class="text-xl"></ion-icon>
                     Add New Vehicle
@@ -26,29 +26,29 @@
         @endif
 
         <!-- Filters -->
-        <div class="rounded-2xl bg-white/10 border border-white/10 backdrop-blur p-6 mb-8">
+        <div class="glass-panel p-6 mb-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Search -->
                 <div class="form-control">
                     <label class="label">
-                        <span class="label-text text-slate-200">Search</span>
+                        <span class="label-text ui-label">Search</span>
                     </label>
                     <input 
                         type="text" 
                         wire:model.live.debounce.300ms="search" 
                         placeholder="Make, Model, or VIN..." 
-                        class="input input-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-input"
                     />
                 </div>
 
                 <!-- Status Filter -->
                 <div class="form-control">
                     <label class="label">
-                        <span class="label-text text-slate-200">Status</span>
+                        <span class="label-text ui-label">Status</span>
                     </label>
                     <select 
                         wire:model.live="status" 
-                        class="select select-bordered w-full bg-slate-900/70 border-slate-700 text-slate-100"
+                        class="ui-select"
                     >
                         <option value="all">All Vehicles</option>
                         <option value="available">Available Only</option>
@@ -60,7 +60,7 @@
 
         <!-- Results Counter -->
         <div class="mb-6">
-            <p class="text-slate-300">
+            <p class="ui-muted">
                 Showing <span class="font-semibold text-amber-300">{{ $vehicles->firstItem() ?? 0 }}</span> 
                 to <span class="font-semibold text-amber-300">{{ $vehicles->lastItem() ?? 0 }}</span> 
                 of <span class="font-semibold text-amber-300">{{ $vehicles->total() }}</span> vehicles
@@ -69,7 +69,7 @@
 
         <!-- Vehicles Table -->
         @if($vehicles->count() > 0)
-            <div class="rounded-2xl bg-white/10 border border-white/10 backdrop-blur overflow-hidden mb-8">
+            <div class="glass-card overflow-hidden mb-8">
                 <div class="overflow-x-auto">
                     <table class="table w-full">
                         <thead class="bg-white/5">
@@ -118,14 +118,14 @@
                                             <a 
                                                 href="{{ route('car.details', $vehicle->slug) }}" 
                                                 target="_blank"
-                                                class="btn btn-sm btn-outline border-slate-400 text-slate-300 hover:bg-slate-400 hover:text-blue-900"
+                                                class="btn-outline-slate btn-sm"
                                                 title="View"
                                             >
                                                 <ion-icon name="eye-outline"></ion-icon>
                                             </a>
                                             <a 
                                                 href="{{ route('admin.vehicles.edit', $vehicle->id) }}" 
-                                                class="btn btn-sm btn-outline border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-blue-900"
+                                                class="btn-outline-amber btn-sm"
                                                 title="Edit"
                                             >
                                                 <ion-icon name="create-outline"></ion-icon>
@@ -133,7 +133,7 @@
                                             <button 
                                                 wire:click="deleteVehicle({{ $vehicle->id }})"
                                                 wire:confirm="Are you sure you want to delete this vehicle? This action cannot be undone."
-                                                class="btn btn-sm btn-outline border-red-400 text-red-400 hover:bg-red-400 hover:text-blue-900"
+                                                class="btn-outline-danger btn-sm"
                                                 title="Delete"
                                             >
                                                 <ion-icon name="trash-outline"></ion-icon>
@@ -153,13 +153,13 @@
             </div>
         @else
             <!-- Empty State -->
-            <div class="flex flex-col items-center justify-center py-20 rounded-2xl bg-white/10 border border-white/10 backdrop-blur">
+            <div class="ui-empty">
                 <ion-icon name="car-outline" class="text-6xl text-slate-400 mb-4"></ion-icon>
                 <h3 class="text-2xl font-bold mb-2">No Vehicles Found</h3>
-                <p class="text-slate-300 mb-6">Try adjusting your filters or add a new vehicle</p>
+                <p class="ui-muted mb-6">Try adjusting your filters or add a new vehicle</p>
                 <a 
                     href="{{ route('admin.vehicles.create') }}" 
-                    class="btn bg-amber-400 text-blue-900 border-none hover:bg-amber-300"
+                    class="btn-primary"
                 >
                     <ion-icon name="add-circle-outline" class="text-xl"></ion-icon>
                     Add New Vehicle

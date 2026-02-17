@@ -1,4 +1,4 @@
-<div class="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-blue-100">
+<div class="min-h-screen bg-linear-to-br from-slate-100 via-white to-slate-100 text-slate-900 dark:from-blue-950 dark:via-blue-900 dark:to-blue-800 dark:text-blue-100">
     <div class="max-w-7xl mx-auto px-6 py-12">
         <header class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-400 via-yellow-300 to-lime-200 text-blue-900 shadow-2xl">
             <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_rgba(0,0,0,0.5),_transparent_60%)]"></div>
@@ -80,9 +80,9 @@
                         <p class="text-blue-300">Curated from trusted auctions and partner yards.</p>
                     </div>
                     <div class="flex items-center gap-3">
-                        <button class="btn btn-sm btn-outline border-blue-500 text-blue-100">Newest</button>
-                        <button class="btn btn-sm btn-outline border-blue-500 text-blue-100">Lowest Price</button>
-                        <button class="btn btn-sm btn-outline border-blue-500 text-blue-100">Top Grade</button>
+                        <button class="btn-outline-sky">Newest</button>
+                        <button class="btn-outline-sky">Lowest Price</button>
+                        <button class="btn-outline-sky">Top Grade</button>
                     </div>
                 </div>
 
@@ -101,7 +101,7 @@
                                 <p class="text-blue-300">{{ number_format($car->mileage) }} km · {{ $car->transmission }} · {{ $car->engine_capacity }}</p>
                                 <div class="mt-4 flex items-center justify-between">
                                     <p class="text-xl font-bold text-amber-300">KES {{ number_format($car->cif_price) }}</p>
-                                    <button class="btn btn-sm p-2 rounded-full bg-amber-300 text-blue-900 border-none group-hover:bg-amber-200">View Details</button>
+                                    <button class="btn-pill-amber-soft">View Details</button>
                                 </div>
                             </div>
                         </div>

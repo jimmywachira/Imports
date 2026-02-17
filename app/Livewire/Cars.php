@@ -155,6 +155,9 @@ class Cars extends Component
 
         return view('livewire.cars', [
             'cars' => $cars,
+        ])->layoutData([
+            'description' => 'Browse premium Japanese import cars in Kenya with verified inspection reports, transparent CIF pricing, and KEBS compliance.',
+            'keywords' => 'car imports, import cars, Japan car imports, Kenya car imports, Nairobi car imports, verified imports, CIF pricing',
         ]);
     }
 }

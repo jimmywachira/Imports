@@ -49,7 +49,7 @@ class Vehicle extends Model
      */
     public function getFormattedPriceAttribute(): string
     {
-        return 'KES ' . number_format($this->cif_price, 0);
+        return 'KES ' . number_format($this->cif_price * 130, 0);
     }
 
     /**
