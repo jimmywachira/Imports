@@ -2,6 +2,33 @@
 
 @section('content')
 <div class="page-shell">
+    {{-- Coming Soon Announcement --}}
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-6 mb-6 sm:mb-8">
+        <div class="glass-panel rounded-2xl p-4 sm:p-6 lg:p-8 bg-gradient-to-r from-amber-400/10 via-amber-500/5 to-amber-400/10 border-l-4 border-amber-400">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <div class="flex-shrink-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-lg bg-amber-400/20">
+                        <ion-icon name="construct-outline" class="text-2xl text-amber-500"></ion-icon>
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-lg sm:text-xl font-bold text-amber-600 dark:text-amber-400">Service Coming Soon</h3>
+                    <p class="text-sm sm:text-base ui-muted mt-1 sm:mt-2">
+                        We're actively developing our Trade-In Program to provide you with the best vehicle valuation and upgrade experience. This service will be available very soon. 
+                        <a href="{{ route('contact') }}" class="text-amber-500 hover:text-amber-600 font-semibold transition">Get in touch</a> to express your interest or visit our 
+                        <a href="{{ route('cars') }}" class="text-amber-500 hover:text-amber-600 font-semibold transition">available cars</a> in the meantime.
+                    </p>
+                </div>
+                <div class="flex-shrink-0">
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-amber-400/20 text-amber-600 dark:text-amber-400">
+                        <span class="w-2 h-2 bg-amber-500 rounded-full animate-pulse mr-2"></span>
+                        Coming Soon
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="max-w-7xl mx-auto px-6 py-16">
         <div class="text-center mb-16">
             <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber-400 mb-4">Flexible Ownership</p>
