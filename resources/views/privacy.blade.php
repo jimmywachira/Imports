@@ -13,7 +13,7 @@
                 <h2 class="text-2xl font-bold mb-4">1. Introduction</h2>
                 <p class="ui-muted leading-relaxed">
                     Xplore Car Imports ("we", "our", or "us") operates the website and services. This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our service and the choices you have associated with that data.
-                </p>
+        `        </p>
             </section>
 
             <section>

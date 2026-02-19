@@ -95,6 +95,10 @@ class VehicleEdit extends Component
     {
         $this->validate();
 
+        if ($this->newImage) {
+            $this->addImage();
+        }
+
         $this->vehicle->update([
             'vin_number' => $this->vin_number,
             'make' => $this->make,

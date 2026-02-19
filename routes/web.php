@@ -23,6 +23,7 @@ Route::view('/inspection-reports', 'inspection')->name('inspection');
 Route::view('/shipping-clearing', 'shipping')->name('shipping');
 Route::view('/vehicle-history', 'history')->name('history');
 Route::view('/trade-in-program', 'tradein')->name('tradein');
+Route::view('/car-importation', 'importation')->name('importation');
 Route::view('/advisory', 'advisory')->name('advisory');
 Route::view('/privacy-policy', 'privacy')->name('privacy');
 Route::view('/terms-of-service', 'terms')->name('terms');

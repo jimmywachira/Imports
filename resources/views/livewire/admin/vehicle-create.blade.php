@@ -194,10 +194,18 @@
                     
                     <!-- Image Upload Input -->
                     <div class="form-control mb-4">
-                        <label class="label cursor-pointer justify-start gap-3 glass-panel border-2 border-dashed border-slate-300/70 dark:border-slate-600 p-6 hover:border-amber-400 transition-colors">
-                            <div class="flex flex-col items-center w-full">
-                                <ion-icon name="cloud-upload-outline" class="text-4xl text-amber-400 mb-2"></ion-icon>
-                                <span class="label-text ui-muted">Click to upload image or drag and drop</span>
+                        <label class="label cursor-pointer justify-start gap-3 rounded-2xl border-2 border-dashed border-slate-300/80 bg-gradient-to-b from-white/60 to-slate-50/30 p-6 shadow-sm transition-all hover:border-amber-400 hover:shadow-md dark:border-slate-600/80 dark:from-slate-900/50 dark:to-slate-800/30">
+                            <div class="flex flex-col items-center w-full text-center">
+                                <div class="mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-amber-300/60 bg-amber-100/70 text-amber-500 shadow-inner dark:border-amber-400/30 dark:bg-amber-400/10">
+                                    <ion-icon name="cloud-upload-outline" class="text-2xl"></ion-icon>
+                                </div>
+                                <span class="text-sm font-semibold text-slate-800 dark:text-slate-100">Upload a vehicle image</span>
+                                <span class="mt-1 text-xs text-slate-500 dark:text-slate-400">Click to browse or drag and drop</span>
+                                <div class="mt-3 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-[11px] font-medium text-slate-600 shadow-sm dark:border-slate-700 dark:bg-slate-900/40 dark:text-slate-300">
+                                    <span>JPG, PNG, WebP</span>
+                                    <span class="h-1 w-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+                                    <span>Up to 5MB</span>
+                                </div>
                                 <input 
                                     type="file" 
                                     wire:model="newImage" 
@@ -251,7 +259,7 @@
                 <div class="flex flex-col sm:flex-row gap-4 pt-6 border-t border-white/10">
                     <button 
                         type="submit" 
-                        class="btn-primary flex-1"
+                        class="btn-primary border-2 border-amber-400 flex-1"
                     >
                         <ion-icon name="checkmark-circle-outline" class="text-xl"></ion-icon>
                         Create Vehicle

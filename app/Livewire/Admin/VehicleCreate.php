@@ -76,6 +76,10 @@ class VehicleCreate extends Component
     {
         $this->validate();
 
+        if ($this->newImage) {
+            $this->addImage();
+        }
+
         $vehicle = Vehicle::create([
             'vin_number' => $this->vin_number,
             'make' => $this->make,

@@ -6,13 +6,13 @@
                 <h1 class="text-4xl md:text-5xl font-extrabold mb-2">Manage Vehicles</h1>
                 <p class="ui-muted">View, edit, and manage all vehicle listings</p>
             </div>
-            <div class="mt-4 md:mt-0">
+            <div class="mt-4 md:mt-0 ">
                 <a 
                     href="{{ route('admin.vehicles.create') }}" 
-                    class="btn-primary"
+                    class="btn-primary p-2 border-2 border-amber-400"
                 >
                     <ion-icon name="add-circle-outline" class="text-xl"></ion-icon>
-                    Add New Vehicle
+                    <span class="ml-2 inline-block">Add New Vehicle</span>
                 </a>
             </div>
         </div>
@@ -27,22 +27,22 @@
 
         <!-- Filters -->
         <div class="glass-panel p-6 mb-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-2">
                 <!-- Search -->
-                <div class="form-control">
+                <div class="form-control border-2 p-2 border-amber-400">
                     <label class="label">
-                        <span class="label-text ui-label">Search</span>
+                        <span class="label-text ui-label p-2">Search</span>
                     </label>
                     <input 
                         type="text" 
                         wire:model.live.debounce.300ms="search" 
                         placeholder="Make, Model, or VIN..." 
-                        class="ui-input"
+                        class="ui-input p-2"
                     />
                 </div>
 
                 <!-- Status Filter -->
-                <div class="form-control">
+                <div class="form-control border-2 p-2 border-amber-400">
                     <label class="label">
                         <span class="label-text ui-label">Status</span>
                     </label>
@@ -74,12 +74,12 @@
                     <table class="table w-full">
                         <thead class="bg-white/5">
                             <tr class="border-b border-white/10">
-                                <th class="text-slate-300 font-semibold">Vehicle</th>
-                                <th class="text-slate-300 font-semibold">Year</th>
-                                <th class="text-slate-300 font-semibold">Specs</th>
-                                <th class="text-slate-300 font-semibold">Price</th>
-                                <th class="text-slate-300 font-semibold">Status</th>
-                                <th class="text-slate-300 font-semibold">Actions</th>
+                                <th class="text-amber-300 p-4 font-semibold">Vehicle</th>
+                                <th class="text-amber-300 p-4 text-left font-semibold">Year</th>
+                                <th class="text-amber-300 p-4 text-left font-semibold">Specs</th>
+                                <th class="text-amber-300 p-4 font-semibold">Price</th>
+                                <th class="text-amber-300 p-4 text-center font-semibold">Status</th>
+                                <th class="text-amber-300 p-4 font-semibold">Actions</th>
                             </tr>
                         </thead>
                         <tbody>

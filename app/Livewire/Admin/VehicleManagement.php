@@ -35,7 +35,6 @@ class VehicleManagement extends Component
     {
         $vehicle = Vehicle::findOrFail($id);
         $vehicle->delete();
-
         session()->flash('message', 'Vehicle deleted successfully.');
     }
 

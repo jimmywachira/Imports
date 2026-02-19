@@ -20,7 +20,7 @@
                     <span class="text-3xl font-bold text-amber-400">{{ $total_vehicles }}</span>
                 </div>
                 <h3 class="text-lg font-semibold mb-1">Total Vehicles</h3>
-                <p class="text-slate-400 text-sm">All vehicles in inventory</p>
+                <p class="text-blue-400 text-sm">All vehicles in inventory</p>
             </div>
 
             <!-- Available Vehicles -->
@@ -32,7 +32,7 @@
                     <span class="text-3xl font-bold text-green-400">{{ $available_vehicles }}</span>
                 </div>
                 <h3 class="text-lg font-semibold mb-1">Available</h3>
-                <p class="text-slate-400 text-sm">Ready for sale</p>
+                <p class="text-blue-400 text-sm">Ready for sale</p>
             </div>
 
             <!-- Sold Vehicles -->
@@ -44,7 +44,7 @@
                     <span class="text-3xl font-bold text-red-400">{{ $sold_vehicles }}</span>
                 </div>
                 <h3 class="text-lg font-semibold mb-1">Sold</h3>
-                <p class="text-slate-400 text-sm">No longer available</p>
+                <p class="text-blue-400 text-sm">No longer available</p>
             </div>
         </div>
 
@@ -72,14 +72,14 @@
                 <a 
                     href="{{ route('cars') }}" 
                     target="_blank"
-                    class="btn-outline-slate justify-start"
+                    class="btn-outline-blue justify-start"
                 >
                     <ion-icon name="eye-outline" class="text-xl"></ion-icon>
                     View Public Site
                 </a>
                 <a 
                     href="{{ route('profile.edit') }}" 
-                    class="btn-outline-slate justify-start"
+                    class="btn-outline-blue justify-start"
                 >
                     <ion-icon name="settings-outline" class="text-xl"></ion-icon>
                     Settings
@@ -98,13 +98,13 @@
                 <div class="overflow-x-auto">
                     <table class="table w-full">
                         <thead>
-                            <tr class="border-b border-white/10">
-                                <th class="ui-muted font-semibold">Vehicle</th>
-                                <th class="ui-muted font-semibold">Year</th>
-                                <th class="ui-muted font-semibold">Mileage</th>
-                                <th class="ui-muted font-semibold">Price</th>
-                                <th class="ui-muted font-semibold">Status</th>
-                                <th class="ui-muted font-semibold">Actions</th>
+                            <tr class="text-amber-400 backdrop-blur-sm border-b border-white/10">
+                                <th class="ui-muted p-4 text-left font-semibold">Vehicle</th>
+                                <th class="ui-muted p-4 font-semibold">Year</th>
+                                <th class="ui-muted p-4 font-semibold">Mileage</th>
+                                <th class="ui-muted p-4 font-semibold">Price</th>
+                                <th class="ui-muted p-4 font-semibold">Status</th>
+                                <th class="ui-muted p-4 text-center font-semibold">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -112,10 +112,10 @@
                                 <tr class="border-b border-white/5 hover:bg-white/5">
                                     <td>
                                         <div class="font-semibold">{{ $vehicle->make }} {{ $vehicle->model }}</div>
-                                        <div class="text-sm text-slate-400">{{ $vehicle->vin_number }}</div>
+                                        <div class="text-sm text-blue-400">{{ $vehicle->vin_number }}</div>
                                     </td>
-                                    <td class="text-slate-300">{{ $vehicle->year_of_reg }}</td>
-                                    <td class="text-slate-300">{{ $vehicle->formatted_mileage }}</td>
+                                    <td class="text-blue-300">{{ $vehicle->year_of_reg }}</td>
+                                    <td class="text-blue-300">{{ $vehicle->formatted_mileage }}</td>
                                     <td class="text-amber-400 font-semibold">{{ $vehicle->formatted_price }}</td>
                                     <td>
                                         @if($vehicle->is_available)
@@ -135,7 +135,7 @@
                                             <a 
                                                 href="{{ route('car.details', $vehicle->slug) }}" 
                                                 target="_blank"
-                                                class="btn-outline-slate btn-sm"
+                                                class="btn-outline-blue btn-sm"
                                             >
                                                 <ion-icon name="eye-outline"></ion-icon>
                                             </a>
@@ -148,8 +148,8 @@
                 </div>
             @else
                 <div class="text-center py-12">
-                    <ion-icon name="car-outline" class="text-6xl text-slate-400 mb-4"></ion-icon>
-                    <p class="text-slate-400">No vehicles added yet</p>
+                    <ion-icon name="car-outline" class="text-6xl text-blue-400 mb-4"></ion-icon>
+                    <p class="text-blue-400">No vehicles added yet</p>
                     <a href="{{ route('admin.vehicles.create') }}" class="btn-primary mt-4">
                         Add Your First Vehicle
                     </a>

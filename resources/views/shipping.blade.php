@@ -11,11 +11,11 @@
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
             <div class="glass-panel p-6 text-center">
-                <p class="text-3xl font-bold text-amber-400 mb-2">2-3 Weeks</p>
+                <p class="text-3xl font-bold text-amber-400 mb-2">4-6 Weeks</p>
                 <p class="ui-muted text-sm">Japan to Port</p>
             </div>
             <div class="glass-panel p-6 text-center">
-                <p class="text-3xl font-bold text-amber-400 mb-2">1 Week</p>
+                <p class="text-3xl font-bold text-amber-400 mb-2">2-5 Days</p>
                 <p class="ui-muted text-sm">Port Clearance</p>
             </div>
             <div class="glass-panel p-6 text-center">

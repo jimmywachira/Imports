@@ -9,6 +9,11 @@ class Vehicle extends Model
 {
     /** @use HasFactory<\Database\Factories\VehicleFactory> */
     use HasFactory;
+    use \Illuminate\Database\Eloquent\Concerns\HasUuids;
+
+    public $incrementing = false;
+
+    protected $keyType = 'string';
 
     protected $fillable = [
         'vin_number',
@@ -25,8 +30,6 @@ class Vehicle extends Model
         'images',
         'is_available',
     ];
-
-    use \Illuminate\Database\Eloquent\Concerns\HasUuids;
 
     protected $casts = [
         'images' => 'array',
@@ -73,9 +76,16 @@ class Vehicle extends Model
      */
     public function getPrimaryImageAttribute(): string
     {
-        if ($this->images && is_array($this->images) && count($this->images) > 0) {
-            return $this->images[0];
+        $images = $this->images;
+
+        if (is_string($images)) {
+            $images = json_decode($images, true) ?: [];
         }
+
+        if (is_array($images) && count($images) > 0 && !empty($images[0])) {
+            return $images[0];
+        }
+
         return "https://picsum.photos/800/600?random={$this->id}";
     }
 

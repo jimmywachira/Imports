@@ -11,22 +11,21 @@
                 </div>
                 <p class="text-slate-500 text-xs sm:text-sm dark:text-blue-400">Premium Japanese car imports with full transparency and KEBS compliance.</p>
                 <div class="flex gap-2 sm:gap-3">
-                    <a href="https://www.youtube.com/@Explore254Discover" class="w-10 h-10 hover:bg-amber-400 rounded-lg flex items-center justify-center transition dark:bg-blue-800 text-sm sm:text-base">
-                        <ion-icon class="text-red-600" name="logo-youtube"></ion-icon>
+                    <a href="https://www.youtube.com/@Explore254Discover" class="w-10 h-10 hover:bg-amber-400 rounded-full flex items-center justify-center transition dark:bg-blue-800 text-sm sm:text-base">
+                        <ion-icon size="large" class="text-red-600" name="logo-youtube"></ion-icon>
                     </a>
-                    <a href="https://www.facebook.com/XploreImports" class="w-10 h-10  hover:bg-amber-400 rounded-lg flex items-center justify-center transition dark:bg-blue-800 text-sm sm:text-base">
-                        <ion-icon class="text-blue-600" name="logo-facebook"></ion-icon>
+                    <a href="https://www.facebook.com/XploreImports" class="w-10 h-10  hover:bg-amber-400 rounded-full flex items-center justify-center transition dark:bg-blue-800 text-sm sm:text-base">
+                        <ion-icon size="large" class="text-blue-600" name="logo-facebook"></ion-icon>
                     </a>
-                    <a href="https://wa.me/c/254757356989" class="w-10 h-10 bg-slate-200 hover:bg-amber-400 rounded-lg flex items-center justify-center transition dark:bg-blue-800 text-sm sm:text-base">
-                        <ion-icon class="text-green-500" name="logo-whatsapp"></ion-icon>
+                    <a href="https://wa.me/c/254757356989" class="w-10 h-10 bg-slate-200 hover:bg-amber-400 rounded-full flex items-center justify-center transition dark:bg-blue-800 text-sm sm:text-base">
+                        <ion-icon size="large" class="text-green-500" name="logo-whatsapp"></ion-icon>
                     </a>
-                    <a href="https://www.tiktok.com/@explore_254k3?_t=ZM-90qsd8mGmTo&_r=1" class="w-10 h-10  hover:bg-amber-400 rounded-lg flex items-center justify-center transition dark:bg-blue-800 text-sm sm:text-base">
-                        <ion-icon class="text-black" name="logo-tiktok"></ion-icon>
+                    <a href="https://www.tiktok.com/@explore_254k3?_t=ZM-90qsd8mGmTo&_r=1" class="w-10 h-10  hover:bg-amber-400 rounded-full flex items-center justify-center transition dark:bg-blue-800 text-sm sm:text-base">
+                        <ion-icon size="large" class="text-black" name="logo-tiktok"></ion-icon>
                     </a>
-                    <a href="https://www.instagram.com/xplorecar_imports/" class="w-10 h-10  hover:bg-amber-400 rounded-lg flex items-center justify-center transition dark:bg-blue-800 text-sm sm:text-base">
-                        <ion-icon class="text-pink-600" name="logo-instagram"></ion-icon>
-                    </a>
-                    
+                    <a href="https://www.instagram.com/xplorecar_imports/" class="w-10 h-10  hover:bg-amber-400 rounded-full flex items-center justify-center transition dark:bg-blue-800 text-sm sm:text-base">
+                        <ion-icon size="large" class="text-pink-600" name="logo-instagram"></ion-icon>
+                    </a>  
                 </div>
             </div>
 
@@ -45,6 +44,7 @@
             <div class="space-y-4">
                 <h3 class="font-semibold text-base sm:text-lg">Services</h3>
                 <ul class="space-y-2 text-sm sm:text-base">
+                    <li><a href="{{ route('importation') }}" class="text-slate-600 hover:text-amber-500 transition dark:text-blue-300 dark:hover:text-amber-400 line-clamp-1">Car Importation</a></li>
                     <li><a href="{{ route('inspection') }}" class="text-slate-600 hover:text-amber-500 transition dark:text-blue-300 dark:hover:text-amber-400 line-clamp-1">Inspection Reports</a></li>
                     <li><a href="{{ route('shipping') }}" class="text-slate-600 hover:text-amber-500 transition dark:text-blue-300 dark:hover:text-amber-400 line-clamp-1">Shipping & Clearing</a></li>
                     <li><a href="{{ route('history') }}" class="text-slate-600 hover:text-amber-500 transition dark:text-blue-300 dark:hover:text-amber-400 line-clamp-1">Vehicle History</a></li>

@@ -38,7 +38,7 @@
                         <label class="label"><span class="label-text ui-label text-sm sm:text-base">Message</span></label>
                         <textarea class="ui-textarea h-24 sm:h-32 text-sm p-2 sm:text-base" placeholder="Your message here ..."></textarea>
                     </div>
-                    <button class="btn-primary btn-lg w-full border-2 border-amber-400 hover:bg-amber-400 p-2 border-2 sm:text-base">Send Message</button>
+                    <button class="btn-primary btn-lg w-full border-2 border-amber-400 hover:bg-amber-400 p-2 sm:text-base">Send Message</button>
                 </form>
             </div>
 
@@ -51,8 +51,8 @@
                         </div>
                         <div>
                             <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Phone</h3>
-                            <p class="ui-muted text-sm sm:text-base">+254 700 123 456</p>
-                            <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-1">Available 24/7</p>
+                            <p class="ui-muted text-sm sm:text-base">+254 757 356 989</p>
+                            <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-1">Just A Call Away</p>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                         </div>
                         <div>
                             <h3 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Office Location</h3>
-                            <p class="ui-muted text-sm sm:text-base">Nairobi, Kenya</p>
+                            <p class="ui-muted text-sm sm:text-base">New Rain, along Kenyatta Road - Nairobi</p>
                             <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-1">Visit by appointment</p>
                         </div>
                     </div>
@@ -133,18 +133,7 @@
                     </div>
                 </details>
 
-                <details class="group rounded-2xl border border-slate-200/60 bg-white/70 p-5 transition hover:border-amber-400/50 dark:bg-slate-900/40 dark:border-white/10">
-                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
-                        <div class="flex items-start gap-3">
-                            <span class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-amber-400/20 text-amber-300 text-sm font-semibold">03</span>
-                            <span class="text-base font-semibold ui-title">How long does the importation process take?</span>
-                        </div>
-                        <ion-icon name="chevron-down-outline" class="text-xl text-amber-400 transition-transform group-open:rotate-180"></ion-icon>
-                    </summary>
-                    <div class="mt-4 pl-11 ui-muted text-sm leading-relaxed">
-                        The average timeline is 6-8 weeks depending on the country of origin, shipping schedules, and customs clearance procedures.
-                    </div>
-                </details>
+                
 
                 <details class="group rounded-2xl border border-slate-200/60 bg-white/70 p-5 transition hover:border-amber-400/50 dark:bg-slate-900/40 dark:border-white/10">
                     <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
@@ -260,6 +249,84 @@
                     </summary>
                     <div class="mt-4 pl-11 ui-muted text-sm leading-relaxed">
                         Absolutely. We assist with NTSA registration, number plate issuance, and roadworthiness certification.
+                    </div>
+                </details>
+
+                <details class="group rounded-2xl border border-slate-200/60 bg-white/70 p-5 transition hover:border-amber-400/50 dark:bg-slate-900/40 dark:border-white/10">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-amber-400/20 text-amber-300 text-sm font-semibold">13</span>
+                            <span class="text-base font-semibold ui-title">How long does the importation process take?</span>
+                        </div>
+                        <ion-icon name="chevron-down-outline" class="text-xl text-amber-400 transition-transform group-open:rotate-180"></ion-icon>
+                    </summary>
+                    <div class="mt-4 pl-11 ui-muted text-sm leading-relaxed">
+                        The entire process typically takes 45-60 days from the time you select your car to final delivery at your doorstep. This includes sourcing, due diligence, shipping (approximately 45 days), port clearance, NTSA registration, and final delivery.
+                    </div>
+                </details>
+
+                <details class="group rounded-2xl border border-slate-200/60 bg-white/70 p-5 transition hover:border-amber-400/50 dark:bg-slate-900/40 dark:border-white/10">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-amber-400/20 text-amber-300 text-sm font-semibold">14</span>
+                            <span class="text-base font-semibold ui-title">What payment options do you offer?</span>
+                        </div>
+                        <ion-icon name="chevron-down-outline" class="text-xl text-amber-400 transition-transform group-open:rotate-180"></ion-icon>
+                    </summary>
+                    <div class="mt-4 pl-11 ui-muted text-sm leading-relaxed">
+                        We offer flexible payment terms: pay 70% upfront when the car is confirmed, and the remaining 30% plus any clearing charges once your vehicle arrives at the Port of Mombasa. All payments are processed securely through verified banking channels.
+                    </div>
+                </details>
+
+                <details class="group rounded-2xl border border-slate-200/60 bg-white/70 p-5 transition hover:border-amber-400/50 dark:bg-slate-900/40 dark:border-white/10">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-amber-400/20 text-amber-300 text-sm font-semibold">15</span>
+                            <span class="text-base font-semibold ui-title">Are all cars Kenya-compliant?</span>
+                        </div>
+                        <ion-icon name="chevron-down-outline" class="text-xl text-amber-400 transition-transform group-open:rotate-180"></ion-icon>
+                    </summary>
+                    <div class="mt-4 pl-11 ui-muted text-sm leading-relaxed">
+                        Yes, absolutely. We only source vehicles that meet Kenya's import regulations, including right-hand drive configuration and the 8-year age limit from the year of manufacture. All cars undergo thorough verification before purchase.
+                    </div>
+                </details>
+
+                <details class="group rounded-2xl border border-slate-200/60 bg-white/70 p-5 transition hover:border-amber-400/50 dark:bg-slate-900/40 dark:border-white/10">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-amber-400/20 text-amber-300 text-sm font-semibold">16</span>
+                            <span class="text-base font-semibold ui-title">Do you handle all customs and NTSA registration?</span>
+                        </div>
+                        <ion-icon name="chevron-down-outline" class="text-xl text-amber-400 transition-transform group-open:rotate-180"></ion-icon>
+                    </summary>
+                    <div class="mt-4 pl-11 ui-muted text-sm leading-relaxed">
+                        Yes, we handle everything. Our team manages all port clearance procedures, duty payments, KEBS compliance verification, NTSA registration, and number plate acquisition. You don't need to worry about any paperwork or bureaucratic processes.
+                    </div>
+                </details>
+
+                <details class="group rounded-2xl border border-slate-200/60 bg-white/70 p-5 transition hover:border-amber-400/50 dark:bg-slate-900/40 dark:border-white/10">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-amber-400/20 text-amber-300 text-sm font-semibold">17</span>
+                            <span class="text-base font-semibold ui-title">Can I get a car specifically for taxi/ride-hailing business?</span>
+                        </div>
+                        <ion-icon name="chevron-down-outline" class="text-xl text-amber-400 transition-transform group-open:rotate-180"></ion-icon>
+                    </summary>
+                    <div class="mt-4 pl-11 ui-muted text-sm leading-relaxed">
+                        Absolutely! We specialize in sourcing fuel-efficient, reliable cars perfect for taxi and ride-hailing businesses. We also provide business advisory services, driver recruitment support, and ongoing mentorship to help you succeed in the transport business.
+                    </div>
+                </details>
+
+                <details class="group rounded-2xl border border-slate-200/60 bg-white/70 p-5 transition hover:border-amber-400/50 dark:bg-slate-900/40 dark:border-white/10">
+                    <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+                        <div class="flex items-start gap-3">
+                            <span class="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-amber-400/20 text-amber-300 text-sm font-semibold">18</span>
+                            <span class="text-base font-semibold ui-title">What if the car has hidden problems?</span>
+                        </div>
+                        <ion-icon name="chevron-down-outline" class="text-xl text-amber-400 transition-transform group-open:rotate-180"></ion-icon>
+                    </summary>
+                    <div class="mt-4 pl-11 ui-muted text-sm leading-relaxed">
+                        Before finalizing any purchase, we conduct comprehensive due diligence including service history checks, recall records, and accident reports. We only source high-grade vehicles (Grade 4 and above) and provide you with complete transparency about the car's condition before you commit to the purchase.
                     </div>
                 </details>
             </div>
