@@ -114,10 +114,10 @@ class Cars extends Component
 
         // Price range filter
         if ($this->minPrice) {
-            $query->where('cif_price', '>=', $this->minPrice);
+            $query->where('cif_price_max', '>=', $this->minPrice);
         }
         if ($this->maxPrice) {
-            $query->where('cif_price', '<=', $this->maxPrice);
+            $query->where('cif_price_min', '<=', $this->maxPrice);
         }
 
         // Year range filter
@@ -131,10 +131,10 @@ class Cars extends Component
         // Sorting
         switch ($this->sortBy) {
             case 'price_low':
-                $query->orderBy('cif_price', 'asc');
+                $query->orderBy('cif_price_min', 'asc');
                 break;
             case 'price_high':
-                $query->orderBy('cif_price', 'desc');
+                $query->orderBy('cif_price_max', 'desc');
                 break;
             case 'year_new':
                 $query->orderBy('year_of_reg', 'desc');

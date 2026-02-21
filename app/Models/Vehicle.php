@@ -25,7 +25,8 @@ class Vehicle extends Model
         'transmission',
         'fuel_type',
         'auction_grade',
-        'cif_price',
+        'cif_price_min',
+        'cif_price_max',
         'slug',
         'images',
         'is_available',
@@ -36,7 +37,8 @@ class Vehicle extends Model
         'is_available' => 'boolean',
         'year_of_reg' => 'integer',
         'mileage' => 'integer',
-        'cif_price' => 'decimal:2',
+        'cif_price_min' => 'decimal:2',
+        'cif_price_max' => 'decimal:2',
     ];
 
     /**
@@ -52,7 +54,9 @@ class Vehicle extends Model
      */
     public function getFormattedPriceAttribute(): string
     {
-        return 'KES ' . number_format($this->cif_price * 130, 0);
+        $minPrice = number_format($this->cif_price_min * 130, 0);
+        $maxPrice = number_format($this->cif_price_max * 130, 0);
+        return "KES {$minPrice} - {$maxPrice}";
     }
 
     /**
@@ -114,9 +118,9 @@ class Vehicle extends Model
      */
     public function scopePriceRange($query, $minPrice, $maxPrice = null)
     {
-        $query->where('cif_price', '>=', $minPrice);
+        $query->where('cif_price_max', '>=', $minPrice);
         if ($maxPrice) {
-            $query->where('cif_price', '<=', $maxPrice);
+            $query->where('cif_price_min', '<=', $maxPrice);
         }
         return $query;
     }

@@ -95,10 +95,10 @@ class Search extends Component
 
         // Price range filter
         if ($this->minPrice) {
-            $query->where('cif_price', '>=', $this->minPrice);
+            $query->where('cif_price_max', '>=', $this->minPrice);
         }
         if ($this->maxPrice) {
-            $query->where('cif_price', '<=', $this->maxPrice);
+            $query->where('cif_price_min', '<=', $this->maxPrice);
         }
 
         // Order by newest

@@ -45,7 +45,10 @@ class VehicleEdit extends Component
     public $auction_grade;
 
     #[Validate('required|numeric|min:0')]
-    public $cif_price;
+    public $cif_price_min;
+
+    #[Validate('required|numeric|min:0')]
+    public $cif_price_max;
 
     #[Validate('boolean')]
     public $is_available;
@@ -69,7 +72,8 @@ class VehicleEdit extends Component
         $this->transmission = $this->vehicle->transmission;
         $this->fuel_type = $this->vehicle->fuel_type;
         $this->auction_grade = $this->vehicle->auction_grade;
-        $this->cif_price = $this->vehicle->cif_price;
+        $this->cif_price_min = $this->vehicle->cif_price_min;
+        $this->cif_price_max = $this->vehicle->cif_price_max;
         $this->is_available = $this->vehicle->is_available;
         $this->images = $this->vehicle->images ?? [];
     }
@@ -109,7 +113,8 @@ class VehicleEdit extends Component
             'transmission' => $this->transmission,
             'fuel_type' => $this->fuel_type,
             'auction_grade' => $this->auction_grade,
-            'cif_price' => $this->cif_price,
+            'cif_price_min' => $this->cif_price_min,
+            'cif_price_max' => $this->cif_price_max,
             'slug' => Str::slug($this->make . ' ' . $this->model . ' ' . $this->year_of_reg . ' ' . $this->vin_number),
             'is_available' => $this->is_available,
             'images' => !empty($this->images) ? $this->images : null,

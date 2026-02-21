@@ -44,7 +44,10 @@ class VehicleCreate extends Component
     public $auction_grade = '4';
 
     #[Validate('required|numeric|min:0')]
-    public $cif_price = 0;
+    public $cif_price_min = 0;
+
+    #[Validate('required|numeric|min:0|gte:cif_price_min')]
+    public $cif_price_max = 0;
 
     #[Validate('boolean')]
     public $is_available = true;
@@ -90,7 +93,8 @@ class VehicleCreate extends Component
             'transmission' => $this->transmission,
             'fuel_type' => $this->fuel_type,
             'auction_grade' => $this->auction_grade,
-            'cif_price' => $this->cif_price,
+            'cif_price_min' => $this->cif_price_min,
+            'cif_price_max' => $this->cif_price_max,
             'slug' => Str::slug($this->make . ' ' . $this->model . ' ' . $this->year_of_reg . ' ' . $this->vin_number),
             'is_available' => $this->is_available,
             'images' => !empty($this->images) ? $this->images : null,

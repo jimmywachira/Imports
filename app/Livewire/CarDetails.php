@@ -63,10 +63,11 @@ class CarDetails extends Component
             ->where('id', '!=', $this->car->id)
             ->where(function ($query) {
                 $query->where('make', $this->car->make)
-                    ->orWhereBetween('cif_price', [
-                        $this->car->cif_price * 0.8,
-                        $this->car->cif_price * 1.2
-                    ]);
+                    ->orWhere(function ($q) {
+                        $avgPrice = ($this->car->cif_price_min + $this->car->cif_price_max) / 2;
+                        $q->where('cif_price_max', '>=', $avgPrice * 0.8)
+                          ->where('cif_price_min', '<=', $avgPrice * 1.2);
+                    });
             })
             ->limit(3)
             ->get();

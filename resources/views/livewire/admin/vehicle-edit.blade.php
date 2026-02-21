@@ -162,20 +162,35 @@
                 </div>
 
                 <!-- Price and Availability -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div class="form-control">
                         <label class="label">
-                            <span class="label-text ui-label font-semibold">CIF Price (KES) *</span>
+                            <span class="label-text ui-label font-semibold">Min CIF Price (KES) *</span>
                         </label>
                         <input 
                             type="number" 
-                            wire:model="cif_price" 
+                            wire:model="cif_price_min" 
+                            min="0" 
+                            step="0.01" 
+                            placeholder="e.g., 2300000" 
+                            class="ui-input"
+                        />
+                        @error('cif_price_min') <span class="text-error text-sm mt-1">{{ $message }}</span> @enderror
+                    </div>
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text ui-label font-semibold">Max CIF Price (KES) *</span>
+                        </label>
+                        <input 
+                            type="number" 
+                            wire:model="cif_price_max" 
                             min="0" 
                             step="0.01" 
                             placeholder="e.g., 2500000" 
                             class="ui-input"
                         />
-                        @error('cif_price') <span class="text-error text-sm mt-1">{{ $message }}</span> @enderror
+                        @error('cif_price_max') <span class="text-error text-sm mt-1">{{ $message }}</span> @enderror
                     </div>
 
                     <div class="form-control">

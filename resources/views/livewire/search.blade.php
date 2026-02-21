@@ -1,4 +1,4 @@
-<div class="page-shell">
+<div class="page-shell border-amber-300">
     <div class="max-w-7xl mx-auto px-6 py-12">
         <!-- Hero Header -->
         <header class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-400 via-yellow-300 to-lime-200 text-blue-900 shadow-2xl mb-12">
@@ -251,8 +251,7 @@
                                     href="{{ route('car.details', $car->slug) }}" 
                                     wire:navigate
                                     class="btn-pill-amber"
-                                >
-                                    
+                                > 
                                     View Details
                                 </a>
                             </div>

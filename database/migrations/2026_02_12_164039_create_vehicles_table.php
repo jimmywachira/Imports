@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string('transmission'); // Automatic/Manual
             $table->string('fuel_type');
             $table->string('auction_grade'); // e.g., 4.5
-            $table->decimal('cif_price', 12, 2); // Price in USD or KES
+            $table->decimal('cif_price_min', 12, 2); // Minimum price in USD or KES
+            $table->decimal('cif_price_max', 12, 2); // Maximum price in USD or KES
             $table->string('slug')->unique(); // For SEO: /cars/toyota-vitz-2020-import
             $table->json('images')->nullable();
             $table->boolean('is_available')->default(true);
