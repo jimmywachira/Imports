@@ -8,6 +8,7 @@ use App\Livewire\Admin\Dashboard;
 use App\Livewire\Admin\VehicleManagement;
 use App\Livewire\Admin\VehicleCreate;
 use App\Livewire\Admin\VehicleEdit;
+use App\Http\Controllers\ContactFormController;
 use App\Models\Vehicle;
 
 Route::redirect('/', '/cars')->name('home');
@@ -19,6 +20,8 @@ Route::get('/cars/{slug}', CarDetails::class)->name('car.details');
 
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
+Route::post('/contact', [ContactFormController::class, 'submit'])->name('contact.submit');
+Route::view('/testimonials', 'testimonials')->name('testimonials');
 Route::view('/inspection-reports', 'inspection')->name('inspection');
 Route::view('/shipping-clearing', 'shipping')->name('shipping');
 Route::view('/vehicle-history', 'history')->name('history');
@@ -34,6 +37,7 @@ Route::get('/sitemap.xml', function () {
         route('cars'),
         route('about'),
         route('contact'),
+        route('testimonials'),
         route('inspection'),
         route('shipping'),
         route('history'),

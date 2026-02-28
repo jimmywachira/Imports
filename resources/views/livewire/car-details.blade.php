@@ -175,7 +175,7 @@
                 <div class="rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-300 text-blue-900 p-4 sm:p-6 lg:p-8 shadow-2xl lg:sticky lg:top-4">
                     <div class="mb-4 sm:mb-6">
                         <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider mb-2">CIF Price</p>
-                        <p class="text-3xl sm:text-4xl lg:text-5xl font-extrabold line-clamp-2">{{ $car->formatted_price }}</p>
+                        <p class="text-xl sm:text-2xl lg:text-3xl font-extrabold">{{ $car->formatted_price }}</p>
                         <p class="text-xs sm:text-sm mt-2 text-blue-800">Cost, Insurance, and Freight to Kenya</p>
                     </div>
 

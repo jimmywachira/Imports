@@ -22,7 +22,7 @@
             </div>
         </header>
 
-        <section class="glass-panel p-6 mb-6 sm:mb-8">
+        <section class="glass-panel p-3 mb-3 sm:mb-4">
             <h2 class="text-lg sm:text-xl font-semibold mb-2">Japan Car Imports in Kenya</h2>
             <p class="ui-muted text-sm sm:text-base">
                 Explore KEBS-compliant import cars from Japan with verified inspection reports, transparent CIF pricing, and
@@ -47,7 +47,7 @@
                         type="text" 
                         wire:model.live.debounce.300ms="search" 
                         placeholder="Make, Model, VIN..." 
-                        class="ui-input p-2 text-sm"
+                        class="ui-input p-2 border-2 text-sm"
                     />
                 </div>
 
@@ -58,7 +58,7 @@
                     </label>
                     <select 
                         wire:model.live="make" 
-                        class="ui-select p-2 text-sm"
+                        class="ui-select p-2 border-2 text-sm"
                     >
                         <option value="">All Makes</option>
                         @foreach($this->makes as $makeName)
@@ -74,7 +74,7 @@
                     </label>
                     <select 
                         wire:model.live="transmission" 
-                        class="ui-select p-2 text-sm"
+                        class="ui-select p-2 border-2 text-sm"
                     >
                         <option value="">All Types</option>
                         <option value="Automatic">Automatic</option>
@@ -89,7 +89,7 @@
                     </label>
                     <select 
                         wire:model.live="fuelType" 
-                        class="ui-select p-2 text-sm"
+                        class="ui-select p-2 border-2 text-sm"
                     >
                         <option value="">All Types</option>
                         <option value="Petrol">Petrol</option>
@@ -109,7 +109,7 @@
                         placeholder="2019" 
                         min="2019"
                         max="2026"
-                        class="ui-input text-sm"
+                        class="ui-input border-2 text-sm"
                     />
                 </div>
 
@@ -124,7 +124,7 @@
                         placeholder="2026" 
                         min="2019"
                         max="2026"
-                        class="ui-input text-sm"
+                        class="ui-input border-2 text-sm"
                     />
                 </div>
 
@@ -137,7 +137,7 @@
                         type="number" 
                         wire:model.live.debounce.300ms="minPrice" 
                         placeholder="500000" 
-                        class="ui-input p-2 text-sm"
+                        class="ui-input border-2 p-2 text-sm"
                     />
                 </div>
 
@@ -150,7 +150,7 @@
                         type="number" 
                         wire:model.live.debounce.300ms="maxPrice" 
                         placeholder="5000000" 
-                        class="ui-input p-2 text-sm"
+                        class="ui-input border-2 p-2 text-sm"
                     />
                 </div>
             </div>
@@ -163,7 +163,7 @@
                     </label>
                     <select 
                         wire:model.live="sortBy" 
-                        class="ui-select p-2 text-sm"
+                        class="ui-select p-2 border-2 text-sm"
                     >
                         <option value="newest">Newest First</option>
                         <option value="price_low">Price: Low to High</option>
@@ -176,7 +176,7 @@
 
                 <button 
                     wire:click="resetFilters" 
-                    class="btn-outline-amber text-sm w-full sm:w-auto"
+                    class="btn-outline-amber text-sm w-full sm:w-auto border-2"
                 >
                     <ion-icon name="refresh-outline" class="text-lg"></ion-icon>
                     Reset Filters
@@ -243,7 +243,7 @@
                             <div class="flex items-start sm:items-center justify-between gap-2">
                                 <div class="flex-1 min-w-0">
                                     <p class="text-xs text-slate-400 mb-0.5">CIF Price</p>
-                                    <p class="text-lg sm:text-2xl font-bold text-amber-300 line-clamp-1">
+                                    <p class="text-sm sm:text-2xl font-bold text-amber-300 ">
                                         {{ $car->formatted_price }}
                                     </p>
                                 </div>
