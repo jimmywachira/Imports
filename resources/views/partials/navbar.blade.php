@@ -30,9 +30,9 @@
 
             <!-- Desktop Navigation Links -->
             <div class="hidden md:flex items-center gap-4 lg:gap-6">
-                {{-- <a href="{{ route('cars') }}" class="text-xs sm:text-sm lg:text-base {{ request()->routeIs('cars') ? 'text-amber-400 font-bold' : 'text-slate-700 dark:text-slate-300' }} hover:text-slate-500 dark:hover:text-slate-400 transition-colors">
+                <a href="{{ route('cars') }}" class="text-xs sm:text-sm lg:text-base {{ request()->routeIs('cars') ? 'text-amber-400 font-bold' : 'text-slate-700 dark:text-slate-300' }} hover:text-slate-500 dark:hover:text-slate-400 transition-colors">
                     Browse Cars
-                </a> --}}
+                </a>
                 <a href="{{ route('about') }}" class="text-xs sm:text-sm lg:text-base {{ request()->routeIs('about') ? 'text-amber-400 font-bold' : 'text-slate-700 dark:text-slate-300' }} hover:text-slate-500 dark:hover:text-slate-400 transition-colors">
                     About
                 </a>
@@ -100,7 +100,7 @@
                 Contact
             </a>
 
-            {{-- @auth
+            @auth
                 <!-- Admin Links Mobile -->
                 <div class="border-t border-slate-200/60 dark:border-white/10 mt-3 pt-3">
                     <div class="px-4 py-2 text-slate-500 dark:text-slate-400 text-xs font-semibold">
@@ -126,8 +126,8 @@
                         </button>
                     </form>
                 </div>
-            @endauth --}}
-            {{-- @guest
+            @endauth 
+            @guest
                 <!-- Guest Links Mobile -->
                 <div class="border-t border-slate-200/60 dark:border-white/10 mt-3 pt-3">
                     <a href="{{ route('login') }}" class="block py-3 px-4 text-slate-700 dark:text-slate-300 hover:text-slate-500 dark:hover:text-slate-400 hover:bg-black/5 dark:hover:bg-white/5 transition-colors rounded text-sm">
@@ -139,13 +139,13 @@
                         Register
                     </a>
                 </div>
-            @endguest --}}
+            @endguest
         </div>
     </div>
 
 
         <!-- Admin Navigation -->
-        {{-- @auth
+        @auth
                     <div class="">
                         <div class="flex items-center justify-evenly h-16">
                             <!-- Navigation Links -->
@@ -182,7 +182,7 @@
                         </div>
                     </div>
             @endauth
-  --}}
+ 
   </nav>              
 
 <script>
