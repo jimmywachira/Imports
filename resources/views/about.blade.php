@@ -42,11 +42,19 @@
 
             {{-- CTA Buttons --}}
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+<<<<<<< HEAD
                 <a href="{{ route('cars') }}" class="bg-green-500 hover:bg-green-600 text-white hover:shadow-xl hover:shadow-green-400/30 transition-all transform hover:scale-105 px-6 py-3 rounded-lg flex items-center justify-center gap-2">
                     <ion-icon name="car-outline" class="text-lg"></ion-icon>
                     Browse Our Vehicles
                 </a>
                 <a href="{{ route('contact') }}" class="bg-green-400 hover:bg-green-500 px-6 py-3  border-white/40 text-white transition-all transform hover:scale-105 backdrop-blur-sm">
+=======
+                {{-- <a href="{{ route('cars') }}" class="bg-amber-500 hover:bg-amber-600 text-white hover:shadow-xl hover:shadow-amber-400/30 transition-all transform hover:scale-105 px-6 py-3 rounded-lg flex items-center justify-center gap-2">
+                    <ion-icon name="car-outline" class="text-lg"></ion-icon>
+                    Browse Our Vehicles
+                </a> --}}
+                <a href="{{ route('contact') }}" class="bg-amber-400 hover:bg-amber-500 px-6 py-3  border-white/40 text-white transition-all transform hover:scale-105 backdrop-blur-sm">
+>>>>>>> 3ed648e989eeaac327e55ccd7f01958169ac6a3f
                     <ion-icon name="call-outline" class="text-lg"></ion-icon>
                     Get in Touch
                 </a>
@@ -467,7 +475,11 @@
         <div class=" bg-gradient-to-r from-green-400 to-green-300 text-lime-900 p-6 sm:p-8 shadow-xl">
             <h2 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Ready to Find Your Dream Car?</h2>
             <p class="mb-4 sm:mb-6 text-sm sm:text-base text-slate-800">Browse our latest inventory of premium Japanese imports, all KEBS compliant and ready for delivery.</p>
+<<<<<<< HEAD
             <a href="{{ route('cars') }}" class="btn-ink p-4 hover:bg-green-500 btn-lg text-sm sm:text-base">Browse Our Inventory</a>
+=======
+            {{-- <a href="{{ route('cars') }}" class="btn-ink btn-lg text-sm sm:text-base">Browse Our Inventory</a> --}}
+>>>>>>> 3ed648e989eeaac327e55ccd7f01958169ac6a3f
         </div>
     </div>
 </div>

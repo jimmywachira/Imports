@@ -18,18 +18,27 @@
     <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div class="flex justify-evenly items-center h-14 sm:h-16">
             <!-- Logo -->
-            <a href="{{ route('search') }}" class="flex items-center gap-2 hover:text-slate-400 transition-colors flex-shrink-0">
+             <a {{--href="{{ route('search') }}" --}}
+            class="flex items-center gap-2 hover:text-slate-400 transition-colors flex-shrink-0"> 
                 <div class="text-lg sm:text-2xl font-bold bg-gradient-to-r from-slate-400 to-slate-500 bg-clip-text text-transparent line-clamp-1">
                     Xplore Car <span class="">Imports</span>
                 </div>
             </a>
 
             <!-- Desktop Navigation Links -->
+<<<<<<< HEAD
             <div class="hidden md:flex items-center gap-4 lg:gap-6 font-bold">
                 <a href="{{ route('cars') }}" class="sm:text-sm px-4 py-2 {{ request()->routeIs('cars') ? 'bg-green-400 text-white text-xl font-semibold' : 'dark:text-slate-300' }} hover:text-l hover:text-slate-500 dark:hover:text-slate-400 transition-all">
                     Browse Cars
                 </a>
                 <a href="{{ route('about') }}" class="sm:text-sm px-4 py-2 {{ request()->routeIs('about') ? 'bg-green-400 text-white text-xl font-semibold' : 'dark:text-slate-300' }} hover:text-l hover:text-slate-500 dark:hover:text-slate-400 transition-all">
+=======
+            <div class="hidden md:flex items-center gap-4 lg:gap-6">
+                {{-- <a href="{{ route('cars') }}" class="text-xs sm:text-sm lg:text-base {{ request()->routeIs('cars') ? 'text-amber-400 font-bold' : 'text-slate-700 dark:text-slate-300' }} hover:text-slate-500 dark:hover:text-slate-400 transition-colors">
+                    Browse Cars
+                </a> --}}
+                <a href="{{ route('about') }}" class="text-xs sm:text-sm lg:text-base {{ request()->routeIs('about') ? 'text-amber-400 font-bold' : 'text-slate-700 dark:text-slate-300' }} hover:text-slate-500 dark:hover:text-slate-400 transition-colors">
+>>>>>>> 3ed648e989eeaac327e55ccd7f01958169ac6a3f
                     About
                 </a>
                 <a href="{{ route('testimonials') }}" class="sm:text-sm px-4 py-2 {{ request()->routeIs('testimonials') ? 'bg-green-400 text-xl text-white font-semibold' : 'dark:text-slate-300' }} hover:text-l hover:text-slate-500 dark:hover:text-slate-400 transition-all">
@@ -48,7 +57,7 @@
                     <ion-icon data-theme-icon name="moon-outline" class="text-lg md:text-xl"></ion-icon>
                 </button> 
 
-                @guest
+                {{-- @guest
                     <!-- Guest Links -->
                     <a href="{{ route('login') }}" class=" sm:text-sm lg:  dark:text-slate-300 hover:text-slate-500 dark:hover:text-slate-400 transition-colors">
                         Login
@@ -56,7 +65,7 @@
                     <a href="{{ route('register') }}" class="btn-primary btn-sm h-10 min-h-10 p-2">
                         Register
                     </a>
-                @endguest
+                @endguest --}}
             </div>
 
             <!-- Mobile Menu Button -->
@@ -83,10 +92,17 @@
                 <ion-icon data-theme-icon name="moon-outline" class="align-middle mr-2"></ion-icon>
                 Toggle Theme
             </button>
+<<<<<<< HEAD
             <a href="{{ route('cars') }}" class="block py-3 px-4 rounded {{ request()->routeIs('cars') ? 'bg-green-400 text-white font-semibold' : 'dark:text-slate-300' }} hover:text-xl hover:text-slate-500 dark:hover:text-slate-400 hover:text-l transition-all">
                 Browse Cars
             </a>
             <a href="{{ route('about') }}" class="block py-3 px-4 rounded {{ request()->routeIs('about') ? 'bg-green-400 text-white font-semibold' : 'dark:text-slate-300' }} hover:text-xl hover:text-slate-500 dark:hover:text-slate-400 hover:text-l transition-all">
+=======
+            {{-- <a href="{{ route('cars') }}" class="block py-3 px-4 text-slate-700 dark:text-slate-300 hover:text-slate-500 dark:hover:text-slate-400 hover:bg-black/5 dark:hover:bg-white/5 transition-colors rounded text-sm">
+                Browse Cars
+            </a> --}}
+            <a href="{{ route('about') }}" class="block py-3 px-4 text-slate-700 dark:text-slate-300 hover:text-slate-500 dark:hover:text-slate-400 hover:bg-black/5 dark:hover:bg-white/5 transition-colors rounded text-sm">
+>>>>>>> 3ed648e989eeaac327e55ccd7f01958169ac6a3f
                 About
             </a>
             <a href="{{ route('testimonials') }}" class="block py-3 px-4 rounded {{ request()->routeIs('testimonials') ? 'bg-green-400 text-white font-semibold' : 'dark:text-slate-300' }} hover:text-xl hover:text-slate-500 dark:hover:text-slate-400 hover:text-l transition-all">
@@ -96,7 +112,7 @@
                 Contact
             </a>
 
-            @auth
+            {{-- @auth
                 <!-- Admin Links Mobile -->
                 <div class="border-t border-slate-200/60 dark:border-white/10 mt-3 pt-3">
                     <div class="px-4 py-2 text-green-500 dark:text-slate-400  font-semibold">
@@ -122,8 +138,8 @@
                         </button>
                     </form>
                 </div>
-            @endauth
-            @guest
+            @endauth --}}
+            {{-- @guest
                 <!-- Guest Links Mobile -->
                 <div class="border-t border-slate-200/60 dark:border-white/10 mt-3 pt-3">
                     <a href="{{ route('login') }}" class="block py-3 px-4  dark:text-slate-300 hover:text-slate-500 dark:hover:text-slate-400 hover:text-l transition-colors rounded">
@@ -135,13 +151,13 @@
                         Register
                     </a>
                 </div>
-            @endguest
+            @endguest --}}
         </div>
     </div>
 
 
         <!-- Admin Navigation -->
-        @auth
+        {{-- @auth
                     <div class="">
                         <div class="flex items-center justify-evenly h-16">
                             <!-- Navigation Links -->
@@ -178,7 +194,8 @@
                         </div>
                     </div>
             @endauth
-  </nav>             
+  --}}
+  </nav>              
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

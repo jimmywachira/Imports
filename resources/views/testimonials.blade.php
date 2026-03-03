@@ -238,10 +238,17 @@
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Ready to Import Your Dream Car?</h2>
             <p class="ui-muted text-base sm:text-lg mb-8 max-w-2xl mx-auto">Join hundreds of satisfied customers who have successfully imported quality vehicles with Xplore Car Imports.</p>
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+<<<<<<< HEAD
                 <a href="{{ route('cars') }}" class="btn-primary text-blue-700 p-3 hover:text-xl transition btn-lg">
                     Browse Vehicles
                 </a>
                 <a href="{{ route('contact') }}" class="btn text-blue-700 hover:text-xl btn-outline transition p-3 btn-lg">
+=======
+                {{-- <a href="{{ route('cars') }}" class="btn-primary btn-lg">
+                    Browse Vehicles
+                </a> --}}
+                <a href="{{ route('contact') }}" class="btn btn-outline btn-lg">
+>>>>>>> 3ed648e989eeaac327e55ccd7f01958169ac6a3f
                     Get in Touch
                 </a>
             </div>

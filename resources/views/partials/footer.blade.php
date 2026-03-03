@@ -33,10 +33,17 @@
             <div class="space-y-4">
                 <h3 class="font-semibold text-base sm:text-lg"> Quick Links </h3>
                 <ul class="space-y-2 text-sm sm:text-base">
+<<<<<<< HEAD
                     <li><a href="{{ route('cars') }}" class="text-slate-600 hover:text-green-500 transition dark:text-blue-300 dark:hover:text-green-400 line-clamp-1">Browse Cars</a></li>
                     <li><a href="{{ route('about') }}" class="text-slate-600 hover:text-green-500 transition dark:text-blue-300 dark:hover:text-green-400 line-clamp-1">About Us</a></li>
                     <li><a href="{{ route('advisory') }}" class="text-slate-600 hover:text-green-500 transition dark:text-blue-300 dark:hover:text-green-400 line-clamp-1">Advisory</a></li>
                     <li><a href="{{ route('contact') }}" class="text-slate-600 hover:text-green-500 transition dark:text-blue-300 dark:hover:text-green-400 line-clamp-1">Contact</a></li>
+=======
+                    {{-- <li><a href="{{ route('cars') }}" class="text-slate-600 hover:text-amber-500 transition dark:text-blue-300 dark:hover:text-amber-400 line-clamp-1">Browse Cars</a></li> --}}
+                    <li><a href="{{ route('about') }}" class="text-slate-600 hover:text-amber-500 transition dark:text-blue-300 dark:hover:text-amber-400 line-clamp-1">About Us</a></li>
+                    <li><a href="{{ route('advisory') }}" class="text-slate-600 hover:text-amber-500 transition dark:text-blue-300 dark:hover:text-amber-400 line-clamp-1">Advisory</a></li>
+                    <li><a href="{{ route('contact') }}" class="text-slate-600 hover:text-amber-500 transition dark:text-blue-300 dark:hover:text-amber-400 line-clamp-1">Contact</a></li>
+>>>>>>> 3ed648e989eeaac327e55ccd7f01958169ac6a3f
                 </ul>
             </div>
 
