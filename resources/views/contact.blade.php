@@ -6,7 +6,7 @@
         <!-- Page Header -->
         <div class="text-center mb-12 sm:mb-16 lg:mb-20 max-w-3xl mx-auto">
             <div class="inline-block mb-4 sm:mb-6">
-                <span class="text-xs font-bold uppercase tracking-widest text-amber-500 bg-amber-500/10 px-4 py-2 rounded-full">
+                <span class="text-xs font-bold uppercase tracking-widest text-green-500 bg-green-500/10 px-4 py-2 rounded-full">
                     Get In Touch
                 </span>
             </div>
@@ -83,7 +83,7 @@
                                     value="{{ old('name') }}"
                                     placeholder="John Doe"
                                     required
-                                    class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-blue-300 dark:border-blue-600 bg-white dark:bg-blue-700 text-blue-900 dark:text-white placeholder-blue-500 dark:placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200
+                                    class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-blue-300 dark:border-blue-600 bg-white dark:bg-blue-700 text-blue-900 dark:text-white placeholder-blue-500 dark:placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
                                     @error('name') border-red-500 focus:ring-red-500 @enderror"
                                 />
                                 @error('name')
@@ -106,7 +106,7 @@
                                     value="{{ old('email') }}"
                                     placeholder="john@example.com"
                                     required
-                                    class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-blue-300 dark:border-blue-600 bg-white dark:bg-blue-700 text-blue-900 dark:text-white placeholder-blue-500 dark:placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200
+                                    class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-blue-300 dark:border-blue-600 bg-white dark:bg-blue-700 text-blue-900 dark:text-white placeholder-blue-500 dark:placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
                                     @error('email') border-red-500 focus:ring-red-500 @enderror"
                                 />
                                 @error('email')
@@ -130,7 +130,7 @@
                                 value="{{ old('phone') }}"
                                 placeholder="+254 757 356 989"
                                 required
-                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-blue-300 dark:border-blue-600 bg-white dark:bg-blue-700 text-blue-900 dark:text-white placeholder-blue-500 dark:placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200
+                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-blue-300 dark:border-blue-600 bg-white dark:bg-blue-700 text-blue-900 dark:text-white placeholder-blue-500 dark:placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
                                 @error('phone') border-red-500 focus:ring-red-500 @enderror"
                             />
                             @error('phone')
@@ -150,7 +150,7 @@
                                 id="subject"
                                 name="subject"
                                 required
-                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-blue-300 dark:border-blue-600 bg-white dark:bg-blue-700 text-blue-900 dark:text-white placeholder-blue-500 dark:placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer
+                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-blue-300 dark:border-blue-600 bg-white dark:bg-blue-700 text-blue-900 dark:text-white placeholder-blue-500 dark:placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer
                                 @error('subject') border-red-500 focus:ring-red-500 @enderror"
                                 style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22none%22 viewBox=%220 0 20 20%22%3E%3Cpath stroke=%22%236B7280%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%221.5%22 d=%22M6 8l4 4 4-4%22/%3E%3C/svg%3E'); background-position: right 0.5rem center; background-repeat: no-repeat; background-size: 1.5em 1.5em; padding-right: 2.5rem;"
                             >
@@ -179,7 +179,7 @@
                                 rows="5"
                                 placeholder="Tell us more about your inquiry..."
                                 required
-                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-blue-300 dark:border-blue-600 bg-white dark:bg-blue-700 text-blue-900 dark:text-white placeholder-blue-500 dark:placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-200 resize-none
+                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-blue-300 dark:border-blue-600 bg-white dark:bg-blue-700 text-blue-900 dark:text-white placeholder-blue-500 dark:placeholder-blue-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 resize-none
                                 @error('message') border-red-500 focus:ring-red-500 @enderror"
                             >{{ old('message') }}</textarea>
                             <p class="mt-2 text-xs text-blue-500 dark:text-blue-400">Minimum 10 characters</p>
@@ -194,7 +194,7 @@
                         <!-- Submit Button -->
                         <button
                             type="submit"
-                            class="w-full py-3 sm:py-3.5 px-6 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg flex items-center justify-center gap-2 group"
+                            class="w-full py-3 sm:py-3.5 px-6 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg flex items-center justify-center gap-2 group"
                         >
                             <span>Send Message</span>
                             <ion-icon name="send" class="text-lg group-hover:tranblue-x-1 transition-transform duration-200"></ion-icon>
@@ -211,14 +211,14 @@
             <div class="lg:col-span-1">
                 <div class="space-y-5 sm:space-y-6">
                     <!-- Phone Card -->
-                    <div class="group bg-white dark:bg-blue-800/50 rounded-xl border border-blue-200 dark:border-blue-700 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-amber-500/30">
+                    <div class="group bg-white dark:bg-blue-800/50 rounded-xl border border-blue-200 dark:border-blue-700 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-green-500/30">
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-green-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                 <ion-icon name="call" class="text-lg text-white"></ion-icon>
                             </div>
                             <div class="flex-1 min-w-0">
                                 <h3 class="text-sm font-semibold text-blue-900 dark:text-white mb-0.5">Phone</h3>
-                                <p class="text-sm font-medium text-amber-600 dark:text-amber-400 break-all">+254 757 356 989</p>
+                                <p class="text-sm font-medium text-green-600 dark:text-green-400 break-all">+254 757 356 989</p>
                                 <p class="text-xs text-blue-500 dark:text-blue-400 mt-1.5">Available 24/7</p>
                             </div>
                         </div>
@@ -283,12 +283,12 @@
                     </div>
 
                     <!-- Quick Support Badge -->
-                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 rounded-xl border border-amber-200 dark:border-amber-800 p-5 sm:p-6">
+                    <div class="bg-gradient-to-br from-green-50 to-orange-50 dark:from-green-900/20 dark:to-orange-900/20 rounded-xl border border-green-200 dark:border-green-800 p-5 sm:p-6">
                         <div class="flex items-start gap-3 sm:gap-4">
                             <div class="text-3xl mt-0.5">⚡</div>
                             <div>
-                                <h4 class="text-sm font-semibold text-amber-900 dark:text-amber-100 mb-1">Quick Support</h4>
-                                <p class="text-xs text-amber-800 dark:text-amber-200 leading-relaxed">Get instant assistance with our WhatsApp support. We're here to help you find the perfect vehicle.</p>
+                                <h4 class="text-sm font-semibold text-green-900 dark:text-green-100 mb-1">Quick Support</h4>
+                                <p class="text-xs text-green-800 dark:text-green-200 leading-relaxed">Get instant assistance with our WhatsApp support. We're here to help you find the perfect vehicle.</p>
                             </div>
                         </div>
                     </div>
