@@ -9,8 +9,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    /* font-family: "Google Sans Code", sans-serif; */
-
     --color-zinc-50: #fafafa;
     --color-zinc-100: #f5f5f5;
     --color-zinc-200: #e5e5e5;
@@ -112,6 +110,13 @@ input:focus[data-flux-control],
 textarea:focus[data-flux-control],
 select:focus[data-flux-control] {
     @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+/* Custom width utilities */
+@layer components {
+    .w-content {
+        @apply w-4/5 mx-auto;
+    }
 }
 
 /* \[:where(&)\]:size-4 {

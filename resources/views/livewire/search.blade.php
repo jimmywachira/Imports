@@ -1,7 +1,7 @@
-<div class="page-shell border-amber-300">
+<div class="page-shell border-green-300">
     <div class="max-w-7xl mx-auto px-6 py-12">
         <!-- Hero Header -->
-        <header class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-400 via-yellow-300 to-lime-200 text-blue-900 shadow-2xl mb-12">
+        <header class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-green-400 via-yellow-300 to-lime-200 text-blue-900 shadow-2xl mb-12">
             <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_rgba(0,0,0,0.5),_transparent_60%)]"></div>
             <div class="relative p-8 md:p-12">
                 <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
@@ -29,9 +29,9 @@
                 inspection reports and Kenya customs support.
             </p>
             <div class="mt-4 flex flex-wrap gap-4 text-sm">
-                <a href="{{ route('cars') }}" class="text-amber-400 hover:text-amber-300 font-medium">Browse Inventory</a>
-                <a href="{{ route('inspection') }}" class="text-amber-400 hover:text-amber-300 font-medium">Inspection Reports</a>
-                <a href="{{ route('shipping') }}" class="text-amber-400 hover:text-amber-300 font-medium">Shipping & Clearing</a>
+                <a href="{{ route('cars') }}" class="text-green-400 hover:text-green-300">Browse Inventory</a>
+                <a href="{{ route('inspection') }}" class="text-green-400 hover:text-green-300">Inspection Reports</a>
+                <a href="{{ route('shipping') }}" class="text-green-400 hover:text-green-300">Shipping & Clearing</a>
             </div>
         </section>
 
@@ -176,7 +176,7 @@
 
                 <button 
                     wire:click="resetFilters" 
-                    class="btn-outline-amber"
+                    class="btn-outline-green"
                 >
                     <ion-icon name="refresh-outline" class="text-lg"></ion-icon>
                     Reset Filters
@@ -187,9 +187,9 @@
         <!-- Results Count -->
         <div class="mb-6">
             <p class="ui-muted">
-                Showing <span class="font-semibold text-amber-300">{{ $cars->firstItem() ?? 0 }}</span> 
-                to <span class="font-semibold text-amber-300">{{ $cars->lastItem() ?? 0 }}</span> 
-                of <span class="font-semibold text-amber-300">{{ $cars->total() }}</span> results
+                Showing <span class="font-semibold text-green-300">{{ $cars->firstItem() ?? 0 }}</span> 
+                to <span class="font-semibold text-green-300">{{ $cars->lastItem() ?? 0 }}</span> 
+                of <span class="font-semibold text-green-300">{{ $cars->total() }}</span> results
             </p>
         </div>
 
@@ -243,14 +243,14 @@
                             <div class="flex items-center justify-between">
                                 <div>
                                     <p class="text-xs text-slate-400 mb-1">CIF Price</p>
-                                    <p class="text-2xl font-bold text-amber-300">
+                                    <p class="text-2xl font-bold text-green-300">
                                         {{ $car->formatted_price }}
                                     </p>
                                 </div>
                                 <a 
                                     href="{{ route('car.details', $car->slug) }}" 
                                     wire:navigate
-                                    class="btn-pill-amber"
+                                    class="btn-pill-green"
                                 > 
                                     View Details
                                 </a>

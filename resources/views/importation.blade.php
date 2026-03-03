@@ -6,7 +6,7 @@
 @section('content')
 <div class="page-shell">
     {{-- Hero Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-4/5 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="text-center mb-8 sm:mb-12 lg:mb-16">
             <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber-400 mb-2 sm:mb-4">Professional Car Importation</p>
             <h1 class="text-2xl sm:text-4xl lg:text-6xl font-extrabold mb-3 sm:mb-6 leading-tight">
@@ -29,7 +29,7 @@
     </div>
 
     {{-- How It Works Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-4/5 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="text-center mb-8 sm:mb-12">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">How It Works</h2>
             <p class="ui-muted text-sm sm:text-base max-w-2xl mx-auto">
@@ -140,7 +140,7 @@
     </div>
 
     {{-- Why Choose Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-4/5 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="text-center mb-8 sm:mb-12">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Why Choose Our Car Importation?</h2>
             <p class="ui-muted text-sm sm:text-base max-w-2xl mx-auto">
@@ -218,7 +218,7 @@
     </div>
 
     {{-- Business Opportunity Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-4/5 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="glass-panel rounded-3xl p-6 sm:p-8 lg:p-12">
             <div class="text-center mb-8 sm:mb-12">
                 <div class="inline-flex items-center justify-center w-16 h-16 bg-amber-400 rounded-full mb-4">

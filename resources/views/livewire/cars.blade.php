@@ -1,7 +1,7 @@
 <div class="page-shell">
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div class="w-full mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12">
         <!-- Hero Header -->
-        <header class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-400 via-yellow-300 to-lime-200 text-blue-900 shadow-2xl mb-8 sm:mb-12">
+        <header class="relative overflow-hidden bg-gradient-to-r from-green-500 to-green-700 text-green-900 shadow-2xl mb-8 sm:mb-12">
             <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_rgba(0,0,0,0.5),_transparent_60%)]"></div>
             <div class="relative p-6 sm:p-8 lg:p-12">
                 <div class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:items-center lg:justify-between">
@@ -29,14 +29,14 @@
                 end-to-end shipping and customs clearing support.
             </p>
             <div class="mt-4 flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm">
-                <a href="{{ route('inspection') }}" class="text-amber-400 hover:text-amber-300 font-medium line-clamp-1">Inspection Reports</a>
-                <a href="{{ route('shipping') }}" class="text-amber-400 hover:text-amber-300 font-medium line-clamp-1">Shipping & Clearing</a>
-                <a href="{{ route('tradein') }}" class="text-amber-400 hover:text-amber-300 font-medium line-clamp-1">Trade-In Program</a>
+                <a href="{{ route('inspection') }}" class="text-green-400 hover:text-green-300 font-medium line-clamp-1">Inspection Reports</a>
+                <a href="{{ route('shipping') }}" class="text-green-400 hover:text-green-300 font-medium line-clamp-1">Shipping & Clearing</a>
+                <a href="{{ route('tradein') }}" class="text-green-400 hover:text-green-300 font-medium line-clamp-1">Trade-In Program</a>
             </div>
         </section>
 
         <!-- Filters Section -->
-        <div class="glass-panel border-amber-300 border-2 rounded p-6 mb-6 sm:mb-8">
+        <div class="glass-panel border-green-300 border-2 rounded p-6 mb-6 sm:mb-8">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4">
                 <!-- Search -->
                 <div class="form-control">
@@ -46,7 +46,7 @@
                     <input 
                         type="text" 
                         wire:model.live.debounce.300ms="search" 
-                        placeholder="Make, Model, VIN..." 
+                        placeholder="Make, Model, VIN ..." 
                         class="ui-input p-2 border-2 text-sm"
                     />
                 </div>
@@ -176,7 +176,7 @@
 
                 <button 
                     wire:click="resetFilters" 
-                    class="btn-outline-amber text-sm w-full sm:w-auto border-2"
+                    class="btn-outline-green text-sm w-full sm:w-auto border-2"
                 >
                     <ion-icon name="refresh-outline" class="text-lg"></ion-icon>
                     Reset Filters
@@ -187,9 +187,9 @@
         <!-- Results Count -->
         <div class="mb-4 sm:mb-6">
             <p class="ui-muted text-xs sm:text-sm">
-                Showing <span class="font-semibold text-amber-300">{{ $cars->firstItem() ?? 0 }}</span> 
-                to <span class="font-semibold text-amber-300">{{ $cars->lastItem() ?? 0 }}</span> 
-                of <span class="font-semibold text-amber-300">{{ $cars->total() }}</span> results
+                Showing <span class="font-semibold text-green-300">{{ $cars->firstItem() ?? 0 }}</span> 
+                to <span class="font-semibold text-green-300">{{ $cars->lastItem() ?? 0 }}</span> 
+                of <span class="font-semibold text-green-300">{{ $cars->total() }}</span> results
             </p>
         </div>
 
@@ -197,7 +197,7 @@
         @if($cars->count() > 0)
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 @foreach($cars as $car)
-                    <div class="ui-card border-amber-300 border-2">
+                    <div class="ui-card border-green-300 border-2">
                         <!-- Image -->
                         <div class="relative overflow-hidden h-40 sm:h-48 lg:h-56 ">
                             <img 
@@ -243,14 +243,14 @@
                             <div class="flex items-start sm:items-center justify-between gap-2">
                                 <div class="flex-1 min-w-0">
                                     <p class="text-xs text-slate-400 mb-0.5">CIF Price</p>
-                                    <p class="text-sm sm:text-2xl font-bold text-amber-300 ">
+                                    <p class="text-sm sm:text-2xl font-bold text-green-300 ">
                                         {{ $car->formatted_price }}
                                     </p>
                                 </div>
                                 <a 
                                     href="{{ route('car.details', $car->slug) }}" 
                                     wire:navigate
-                                    class="btn-pill-amber bg-amber-500 p-2 rounded sm:text-sm flex-shrink-0 whitespace-nowrap"
+                                    class="btn-pill-green bg-green-500 p-2 rounded sm:text-sm flex-shrink-0 whitespace-nowrap"
                                 >
                                    <span class="">View Details</span>
                                     

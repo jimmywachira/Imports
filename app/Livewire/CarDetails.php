@@ -75,7 +75,6 @@ class CarDetails extends Component
         return view('livewire.car-details', [
             'similarCars' => $similarCars,
             'pageTitle' => $this->car->full_name . ' - Xplore Car Imports',
-        ])->layoutData([
             'title' => $this->car->full_name . ' - Xplore Car Imports',
             'description' => $description,
             'keywords' => 'import cars, Japan car imports, ' . $this->car->make . ', ' . $this->car->model . ', CIF price, Kenya car imports',

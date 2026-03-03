@@ -33,9 +33,16 @@ class VehicleManagement extends Component
 
     public function deleteVehicle($id)
     {
-        $vehicle = Vehicle::findOrFail($id);
-        $vehicle->delete();
-        session()->flash('message', 'Vehicle deleted successfully.');
+        try {
+            $vehicle = Vehicle::findOrFail($id);
+            $vehicleName = "{$vehicle->make} {$vehicle->model}";
+            $vehicle->delete();
+            
+            $this->resetPage();
+            session()->flash('success', "Vehicle '{$vehicleName}' deleted successfully.");
+        } catch (\Exception $e) {
+            session()->flash('error', 'Failed to delete vehicle. Please try again.');
+        }
     }
 
     public function toggleAvailability($id)

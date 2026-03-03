@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="page-shell">
-    <div class="max-w-5xl mx-auto px-6 py-16">
+    <div class="w-4/5 mx-auto px-6 py-16">
         <div class="text-center mb-12">
             <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber-400 mb-4">Advisory</p>
             <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Taxi Business Masterclass</h1>

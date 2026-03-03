@@ -97,13 +97,27 @@ class VehicleEdit extends Component
 
     public function update()
     {
-        $this->validate();
+        // Validate only the update fields, exclude newImage
+        $this->validate([
+            'vin_number' => 'required|string',
+            'make' => 'required|string|max:255',
+            'model' => 'required|string|max:255',
+            'year_of_reg' => 'required|integer|min:2019|max:2026',
+            'mileage' => 'required|integer|min:0',
+            'engine_capacity' => 'required|string',
+            'transmission' => 'required|in:Automatic,Manual',
+            'fuel_type' => 'required|in:Petrol,Diesel,Hybrid',
+            'auction_grade' => 'required|string',
+            'cif_price_min' => 'required|numeric|min:0',
+            'cif_price_max' => 'required|numeric|min:0',
+            'is_available' => 'boolean',
+        ]);
 
         if ($this->newImage) {
             $this->addImage();
         }
 
-        $this->vehicle->update([
+        $updateData = [
             'vin_number' => $this->vin_number,
             'make' => $this->make,
             'model' => $this->model,
@@ -117,8 +131,14 @@ class VehicleEdit extends Component
             'cif_price_max' => $this->cif_price_max,
             'slug' => Str::slug($this->make . ' ' . $this->model . ' ' . $this->year_of_reg . ' ' . $this->vin_number),
             'is_available' => $this->is_available,
-            'images' => !empty($this->images) ? $this->images : null,
-        ]);
+        ];
+
+        // Only update images if they were modified
+        if (!empty($this->images)) {
+            $updateData['images'] = $this->images;
+        }
+
+        $this->vehicle->update($updateData);
 
         session()->flash('message', 'Vehicle updated successfully!');
 
