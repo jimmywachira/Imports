@@ -433,7 +433,7 @@
                 </div>
 
                 <div class="space-y-5">
-                    <div class="p-4 rounded-lg bg-blue-500/10 border border-blue-500/30">
+                    <div class="p-4 rounded-lg bg-blue-500/10 border border-black/500/30">
                         <div class="flex items-start gap-3">
                             <ion-icon name="information-circle" class="text-blue-400 text-xl flex-shrink-0 mt-0.5"></ion-icon>
                             <div class="text-sm">

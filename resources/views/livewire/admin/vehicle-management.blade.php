@@ -1,5 +1,5 @@
 <div class="page-shell">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+    <div class="w-full lg:w-3/4 mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         
         <!-- Page Header -->
         <header class="mb-8 lg:mb-10">
@@ -15,7 +15,7 @@
                 <div class="shrink-0">
                     <a 
                         href="{{ route('admin.vehicles.create') }}" 
-                        class="btn-primary inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+                        class="btn-primary inline-flex items-center border-2 bg-emerald-600 text-bold border-emerald-600 justify-center gap-2 px-5 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-slate-900"
                         aria-label="Add new vehicle"
                     >
                         <ion-icon name="add-circle-outline" class="text-xl"></ion-icon>

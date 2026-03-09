@@ -11,7 +11,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 #[Layout('layouts.app')]
-#[Title('Premium Japanese Car Imports - Xplore Car Imports')]
+#[Title('Premium Japanese Car Imports - Xplore Cars Imports')]
 class Search extends Component
 {
     use WithPagination;

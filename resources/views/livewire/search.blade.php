@@ -1,5 +1,5 @@
 <div class="page-shell border-amber-300">
-    <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="w-full lg:w-3/4 mx-auto px-6 py-12">
         <!-- Hero Header -->
         <header class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-400 via-yellow-300 to-lime-200 text-blue-900 shadow-2xl mb-12">
             <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,_rgba(0,0,0,0.5),_transparent_60%)]"></div>

@@ -15,7 +15,7 @@
     <div class="relative w-full max-w-md">
         <!-- Logo/Brand Section -->
         <div class="text-center mb-8">
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-300 mb-4 shadow-xl">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-400 to-green-300 mb-4 shadow-xl">
                 <ion-icon name="person-add" class="text-3xl text-blue-900"></ion-icon>
             </div>
             <h1 class="text-3xl font-bold text-white mb-2">Create Account</h1>
@@ -25,7 +25,7 @@
         <!-- Register Card -->
         <div class="rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl p-8">
             <!-- Session Status -->
-            <x-auth-session-status class="mb-4 text-center text-amber-300" :status="session('status')" />
+            <x-auth-session-status class="mb-4 text-center text-green-300" :status="session('status')" />
 
             <form method="POST" action="{{ route('register.store') }}" class="space-y-5">
                 @csrf
@@ -103,7 +103,7 @@
                 <flux:button 
                     type="submit"
                     variant="primary" 
-                    class="w-full bg-gradient-to-r from-amber-400 to-yellow-300 hover:from-amber-500 hover:to-yellow-400 text-blue-900 font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mt-6"
+                    class="w-full bg-gradient-to-r from-green-400 to-green-300 hover:from-green-500 hover:to-green-400 text-blue-900 font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 mt-6"
                     data-test="register-user-button"
                 >
                     <ion-icon name="rocket-outline" class="text-xl align-middle mr-2"></ion-icon>
@@ -115,7 +115,7 @@
             <div class="mt-6 pt-6 border-t border-white/10 text-center">
                 <p class="text-blue-200 text-sm">
                     Already have an account?
-                    <a href="{{ route('login') }}" class="text-amber-300 hover:text-amber-200 font-semibold transition-colors ml-1" wire:navigate>
+                    <a href="{{ route('login') }}" class="text-green-300 hover:text-green-200 font-semibold transition-colors ml-1" wire:navigate>
                         Sign in here
                     </a>
                 </p>

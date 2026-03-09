@@ -8,7 +8,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 #[Layout('layouts.app')]
-#[Title('Admin Dashboard - Xplore Car Imports')]
+#[Title('Admin Dashboard - Xplore Cars Imports')]
 class Dashboard extends Component
 {
     public function render()

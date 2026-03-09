@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Vehicle>
@@ -55,6 +56,34 @@ class VehicleFactory extends Factory
         $yearOfReg = $this->faker->numberBetween(2019, 2026);
         $vin = strtoupper($this->faker->bothify('?????????????????'));
 
+        // Load actual images from storage/app/public/vehicles
+        $storagePath = storage_path('app/public/vehicles');
+        $images = [];
+        
+        if (File::exists($storagePath)) {
+            $files = File::files($storagePath);
+            $availableImages = collect($files)
+                ->map(fn ($file) => 'vehicles/' . $file->getFilename())
+                ->toArray();
+            
+            // Randomly select 2-4 images for this vehicle
+            if (!empty($availableImages)) {
+                $imageCount = $this->faker->numberBetween(2, min(4, count($availableImages)));
+                for ($i = 0; $i < $imageCount; $i++) {
+                    $image = $this->faker->randomElement($availableImages);
+                    // Avoid duplicates
+                    if (!in_array($image, $images)) {
+                        $images[] = $image;
+                    }
+                }
+            }
+        }
+
+        // Fallback if storage is empty
+        if (empty($images)) {
+            $images = null;
+        }
+
         return [
             'vin_number' => $vin,
             'make' => $selected['make'],
@@ -65,10 +94,10 @@ class VehicleFactory extends Factory
             'transmission' => $this->faker->randomElement(['Automatic', 'Manual']),
             'fuel_type' => $this->faker->randomElement(['Petrol', 'Diesel', 'Hybrid']),
             'auction_grade' => $this->faker->randomElement(['3', '3.5', '4', '4.5', '5']),
-            'cif_price_min' => $basePrice = $this->faker->randomFloat(2, 8000, 60000),
-            'cif_price_max' => $basePrice + $this->faker->randomFloat(2, 1000, 5000),
+            'cif_price_min' => $basePrice = $this->faker->randomFloat(2, 10000, 60000),
+            'cif_price_max' => $basePrice + $this->faker->randomFloat(2, 30000, 50000),
             'slug' => Str::slug($selected['make'] . ' ' . $selected['model'] . ' ' . $yearOfReg . ' ' . $vin),
-            'images' => null,
+            'images' => $images,
             'is_available' => $this->faker->boolean(80),
         ];
     }

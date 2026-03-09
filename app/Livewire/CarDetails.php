@@ -30,20 +30,20 @@ class CarDetails extends Component
 
     public function nextImage()
     {
-        $images = $this->car->images ?? [];
-        if (empty($images)) return;
+        $imageUrls = $this->car->image_urls ?? [];
+        if (empty($imageUrls)) return;
         
-        $this->selectedImage = ($this->selectedImage + 1) % count($images);
+        $this->selectedImage = ($this->selectedImage + 1) % count($imageUrls);
     }
 
     public function previousImage()
     {
-        $images = $this->car->images ?? [];
-        if (empty($images)) return;
+        $imageUrls = $this->car->image_urls ?? [];
+        if (empty($imageUrls)) return;
         
         $this->selectedImage = $this->selectedImage > 0 
             ? $this->selectedImage - 1 
-            : count($images) - 1;
+            : count($imageUrls) - 1;
     }
 
     public function render()
@@ -73,10 +73,12 @@ class CarDetails extends Component
             ->get();
 
         return view('livewire.car-details', [
+            'car' => $this->car,
+            'selectedImage' => $this->selectedImage,
             'similarCars' => $similarCars,
-            'pageTitle' => $this->car->full_name . ' - Xplore Car Imports',
+            'pageTitle' => $this->car->full_name . ' - Xplore Cars Imports',
         ])->layoutData([
-            'title' => $this->car->full_name . ' - Xplore Car Imports',
+            'title' => $this->car->full_name . ' - Xplore Cars Imports',
             'description' => $description,
             'keywords' => 'import cars, Japan car imports, ' . $this->car->make . ', ' . $this->car->model . ', CIF price, Kenya car imports',
         ]);

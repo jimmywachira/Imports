@@ -2,9 +2,9 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="scroll-smooth">
 <head>
     @php
-        $siteName = 'Xplore Car Imports';
+        $siteName = 'Xplore Cars Imports';
         $pageTitle = $title ?? config('app.name', $siteName);
-        $pageDescription = $description ?? 'Xplore Car Imports helps Kenyans buy premium Japanese vehicles with transparent CIF pricing, KEBS compliance, inspection reports, shipping, and customs clearing.';
+        $pageDescription = $description ?? 'Xplore Cars Imports helps Kenyans buy premium Japanese vehicles with transparent CIF pricing, KEBS compliance, inspection reports, shipping, and customs clearing.';
         $pageKeywords = $keywords ?? 'car imports, import cars, car importers, import car dealership, car shipping, Japan car imports, Kenya car imports, Nairobi car imports';
         $pageUrl = request()->url();
         $siteUrl = config('app.url') ?: $pageUrl;
@@ -78,8 +78,7 @@
 
 </head>
 
-<body class="w-full min-h-screen flex flex-col bg-linear-to-br from-slate-100 via-white to-slate-100 text-slate-900 dark:from-blue-950 dark:via-blue-900 dark:to-blue-800 dark:text-blue-100 antialiased transition-colors duration-300" style="font-family: 'Google Sans Code', sans-serif;">
-
+<body class="w-full min-h-screen flex flex-col bg-linear-to-br from-slate-100 via-white to-slate-100  dark:from-blue-950 dark:via-blue-900 dark:to-blue-800 antialiased transition-colors duration-300" style="font-family: 'Google Sans Code', sans-serif;">
     <!-- Navigation -->
     @include('partials.navbar')
 
@@ -135,5 +134,6 @@
         })();
     </script>
 
+    @stack('scripts')
 </body>
 </html>

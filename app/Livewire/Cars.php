@@ -11,7 +11,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 #[Layout('layouts.app')]
-#[Title('Browse Import Cars - Xplore Car Imports')]
+#[Title('Browse Import Cars - Xplore Cars Imports')]
 class Cars extends Component
 {
     use WithPagination;
@@ -122,7 +122,7 @@ class Cars extends Component
 
         // Year range filter
         if ($this->minYear) {
-            $query->where('year_of_reg', '>=', $this->minYear);
+            $query->where('year_of_reg', '>=', $this->minYear) ;
         }
         if ($this->maxYear) {
             $query->where('year_of_reg', '<=', $this->maxYear);

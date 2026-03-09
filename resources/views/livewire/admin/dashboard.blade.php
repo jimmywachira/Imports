@@ -1,5 +1,5 @@
 <div class="page-shell">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+    <div class="w-full lg:w-3/4 mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
         
         <!-- Header -->
         <header class="mb-8 lg:mb-12">

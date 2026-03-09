@@ -4,17 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 
 class Vehicle extends Model
 {
     /** @use HasFactory<\Database\Factories\VehicleFactory> */
     use HasFactory;
-    use \Illuminate\Database\Eloquent\Concerns\HasUuids;
-
-    public $incrementing = false;
-
-    protected $keyType = 'string';
 
     protected $fillable = [
         'vin_number',
@@ -87,17 +81,105 @@ class Vehicle extends Model
             $images = json_decode($images, true) ?: [];
         }
 
-        if (is_array($images) && count($images) > 0 && !empty($images[0])) {
-            $image = $images[0];
-            // Handle old format (absolute/relative URL) and path-only DB values.
-            if (str_starts_with($image, '/') || str_starts_with($image, 'http')) {
-                return $image;
-            }
+        if (is_array($images) && count($images) > 0) {
+            foreach ($images as $image) {
+                if (empty($image) || !is_string($image)) {
+                    continue;
+                }
 
-            return Storage::url($image);
+                return $this->normalizeImageUrl($image);
+            }
         }
 
-        return "https://picsum.photos/800/600?random={$this->id}";
+        return $this->fallbackImageUrls()[0];
+    }
+
+    public function getImageUrlsAttribute(): array
+    {
+        $images = $this->images;
+
+        if (is_string($images)) {
+            $images = json_decode($images, true) ?: [];
+        }
+
+        if (!is_array($images) || empty($images)) {
+            return $this->fallbackImageUrls();
+        }
+
+        $urls = collect($images)
+            ->filter(fn ($image) => is_string($image) && !empty($image))
+            ->map(fn (string $image) => $this->normalizeImageUrl($image))
+            ->values()
+            ->all();
+
+        if (empty($urls)) {
+            return $this->fallbackImageUrls();
+        }
+
+        return $urls;
+    }
+
+    protected function fallbackImageUrls(): array
+    {
+        $seedBase = $this->slug ?: ($this->vin_number ?: (string) ($this->id ?? 'vehicle'));
+
+        return [
+            'https://picsum.photos/seed/' . rawurlencode($seedBase . '-1') . '/1200/800',
+            'https://picsum.photos/seed/' . rawurlencode($seedBase . '-2') . '/1200/800',
+            'https://picsum.photos/seed/' . rawurlencode($seedBase . '-3') . '/1200/800',
+        ];
+    }
+
+    protected function normalizeImageUrl(string $image): string
+    {
+        // Normalize backslashes and trim whitespace
+        $image = trim(str_replace('\\', '/', $image));
+
+        // If already a full URL, return as-is
+        if (str_starts_with($image, 'http://') || str_starts_with($image, 'https://')) {
+            return $image;
+        }
+
+        // If already a storage URL, return as-is
+        if (str_starts_with($image, '/storage/')) {
+            return $image;
+        }
+
+        // Remove 'storage/' prefix and ensure leading slash
+        if (str_starts_with($image, 'storage/')) {
+            $image = ltrim(substr($image, 8), '/');
+            return $this->publicStorageUrl($image);
+        }
+
+        // Handle /public/ prefix
+        if (str_starts_with($image, '/public/')) {
+            $image = ltrim(substr($image, 7), '/');
+            return $this->publicStorageUrl($image);
+        }
+
+        // Handle public/ prefix
+        if (str_starts_with($image, 'public/')) {
+            $image = ltrim(substr($image, 7), '/');
+            return $this->publicStorageUrl($image);
+        }
+
+        // If starts with /, remove it for consistency
+        $image = ltrim($image, '/');
+
+        // Default: treat as public disk file
+        return $this->publicStorageUrl($image);
+    }
+
+    protected function publicStorageUrl(string $path): string
+    {
+        $path = ltrim($path, '/');
+
+        if (app()->runningInConsole()) {
+            return '/storage/' . $path;
+        }
+
+        $baseUrl = rtrim(request()->getBaseUrl(), '/');
+        return ($baseUrl !== '' ? $baseUrl : '') . '/storage/' . $path;
     }
 
     /**

@@ -1,22 +1,22 @@
-@extends('layouts.app', ['title' => 'Client Testimonials - Xplore Car Imports', 'description' => 'Read testimonials from satisfied Xplore Car Imports clients who have successfully imported their dream cars from Japan.'])
+@extends('layouts.app', ['title' => 'Client Testimonials - Xplore Cars Imports', 'description' => 'Read testimonials from satisfied Xplore Cars Imports clients who have successfully imported their dream cars from Japan.'])
 
 @section('content')
 <div class="page-shell">
     {{-- Hero Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-3 lg:px-4 py-4 sm:py-6 lg:py-8">
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-3 lg:px-4 py-4 sm:py-6 lg:py-8">
         <div class="text-center mb-8 sm:mb-12 lg:mb-16">
-            <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber-400 mb-2 sm:mb-4">What Our Clients Say</p>
-            <h1 class="text-2xl sm:text-4xl lg:text-6xl font-extrabold mb-3 sm:mb-4 leading-tight">Hear from Satisfied Xplore Car Imports Clients</h1>
-            <p class="text-base sm:text-lg lg:text-xl ui-muted max-w-3xl mx-auto px-3 sm:px-0">Join Successful Kenyans who have imported quality vehicles with confidence and ease through Xplore Car Imports.</p>
+            <p class="uppercase tracking-[0.2em] text-xs font-semibold text-green-400 mb-2 sm:mb-4">What Our Clients Say</p>
+            <h1 class="text-2xl sm:text-4xl text-green-400 lg:text-6xl font-extrabold mb-3 sm:mb-4 leading-tight">Hear from Satisfied Xplore Cars Imports Clients</h1>
+            <p class="text-base sm:text-lg lg:text-xl ui-muted max-w-3xl mx-auto px-3 sm:px-0">Join Successful Kenyans who have imported quality vehicles with confidence and ease through Xplore Cars Imports.</p>
         </div>
     </div>
 
     {{-- Video Testimonials Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div class="text-center mb-8 sm:mb-12">
-            <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber-400 mb-2 sm:mb-4">Client Stories</p>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold">Watch Real Client Video Testimonials</h2>
-            <p class="ui-muted mt-2 text-sm sm:text-base max-w-2xl mx-auto">Hear directly from our satisfied clients as they share their experience importing vehicles with Xplore Car Imports</p>
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div class="text-center mb-8 sm:mb-12"> 
+            <p class="uppercase tracking-[0.2em] text-xs font-semibold text-green-400 mb-2 sm:mb-4">Client Stories</p>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-400">Watch Real Client Video Testimonials</h2>
+            <p class="ui-muted mt-2 text-sm sm:text-base max-w-2xl mx-auto">Hear directly from our satisfied clients as they share their experience importing vehicles with Xplore Cars Imports</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -96,22 +96,22 @@
                 </div>
             </div>
     </div>
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
             <div class="glass-panel p-4 sm:p-6 text-center">
-                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-400 mb-1 sm:mb-2">10+</p>
+                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-400 mb-1 sm:mb-2">10+</p>
                 <p class="ui-muted text-xs sm:text-sm">Happy Customers</p>
             </div>
             <div class="glass-panel p-4 sm:p-6 text-center">
-                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-400 mb-1 sm:mb-2">4.9/5</p>
+                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-400 mb-1 sm:mb-2">4.9/5</p>
                 <p class="ui-muted text-xs sm:text-sm">Average Rating</p>
             </div>
             <div class="glass-panel p-4 sm:p-6 text-center">
-                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-400 mb-1 sm:mb-2">10+</p>
+                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-400 mb-1 sm:mb-2">10+</p>
                 <p class="ui-muted text-xs sm:text-sm">Vehicles Imported</p>
             </div>
             <div class="glass-panel p-4 sm:p-6 text-center">
-                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-amber-400 mb-1 sm:mb-2">100%</p>
+                <p class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-400 mb-1 sm:mb-2">100%</p>
                 <p class="ui-muted text-xs sm:text-sm">Satisfaction Guarantee</p>
             </div>
         </div>
@@ -119,7 +119,7 @@
 
     
     {{-- Testimonials Grid --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {{-- Testimonial Card 1 --}}
             <div class="glass-panel p-6 sm:p-8 hover:shadow-lg transition-shadow">
@@ -136,7 +136,7 @@
                         <ion-icon name="star" class="text-green-400"></ion-icon>
                     </div>
                 </div>
-                <p class="ui-muted text-sm leading-relaxed">"Xplore Car Imports made the entire process seamless. From selecting the car to clearing it at customs, everything was handled professionally. I saved significantly compared to what I would have spent elsewhere. Highly recommended!"</p>
+                <p class="ui-muted text-sm leading-relaxed">"Xplore Cars Imports made the entire process seamless. From selecting the car to clearing it at customs, everything was handled professionally. I saved significantly compared to what I would have spent elsewhere. Highly recommended!"</p>
             </div>
 
             {{-- Testimonial Card 2 --}}
@@ -232,10 +232,10 @@
     </div>
 
     {{-- CTA Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="glass-panel p-8 sm:p-12 lg:p-16 text-center">
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Ready to Import Your Dream Car?</h2>
-            <p class="ui-muted text-base sm:text-lg mb-8 max-w-2xl mx-auto">Join hundreds of satisfied customers who have successfully imported quality vehicles with Xplore Car Imports.</p>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-green-400 mb-4">Ready to Import Your Dream Car?</h2>
+            <p class="ui-muted text-base sm:text-lg mb-8 max-w-2xl mx-auto">Join hundreds of satisfied customers who have successfully imported quality vehicles with Xplore Cars Imports.</p>
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <a href="{{ route('cars') }}" class="btn-primary btn-lg">
                     Browse Vehicles
@@ -247,4 +247,6 @@
         </div>
     </div>
 </div>
+
+@include('partials.footer')
 @endsection

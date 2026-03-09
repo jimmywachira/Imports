@@ -18,5 +18,5 @@ A new message has been received from your website contact form.
 You can reach this person at {{ $formData['email'] }} or {{ $formData['phone'] }}.
 
 Thanks,
-Xplore Car Imports
+Xplore Cars Imports
 </x-mail::message>

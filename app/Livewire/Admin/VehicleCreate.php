@@ -9,7 +9,6 @@ use Illuminate\Support\Str;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
-use Illuminate\Support\Facades\Storage;
 
 #[Layout('layouts.app')]
 #[Title('Create Vehicle - Admin')]
@@ -69,9 +68,7 @@ class VehicleCreate extends Component
         $this->validate(['newImage' => 'required|image|max:5120']);
         
         if ($this->newImage) {
-            // Store the file and save the path (not the full URL)
-            $path = $this->newImage->store('vehicles', 'public');
-            $this->images[] = $path;  // Store just the path, not the full URL
+            $this->images[] = $this->storeImageAndGetPath();
             $this->newImage = null;
             
             // Reset validation state for the newImage field
@@ -102,12 +99,27 @@ class VehicleCreate extends Component
             'cif_price_max' => 'required|numeric|min:0|gte:cif_price_min',
             'is_available' => 'boolean',
             'images' => 'array|max:5',
+            'images.*' => 'string|max:2048',
             'newImage' => 'nullable|image|max:5120',
         ]);
 
         if ($this->newImage) {
-            $this->addImage();
+            if (count($this->images) >= 5) {
+                $this->addError('images', 'Maximum 5 images allowed per vehicle.');
+                return;
+            }
+
+            // Save currently selected file even if user did not click "Add Image" first.
+            $this->images[] = $this->storeImageAndGetPath();
+            $this->newImage = null;
         }
+
+        $imagePaths = collect($this->images)
+            ->filter(fn ($path) => is_string($path) && trim($path) !== '')
+            ->map(fn (string $path) => ltrim(str_replace('\\', '/', trim($path)), '/'))
+            ->unique()
+            ->values()
+            ->all();
 
         $vehicle = Vehicle::create([
             'vin_number' => $this->vin_number,
@@ -123,7 +135,7 @@ class VehicleCreate extends Component
             'cif_price_max' => $this->cif_price_max,
             'slug' => Str::slug($this->make . ' ' . $this->model . ' ' . $this->year_of_reg . ' ' . $this->vin_number),
             'is_available' => $this->is_available,
-            'images' => !empty($this->images) ? $this->images : null,
+            'images' => !empty($imagePaths) ? $imagePaths : null,
         ]);
 
         session()->flash('message', 'Vehicle created successfully!');
@@ -134,5 +146,10 @@ class VehicleCreate extends Component
     public function render()
     {
         return view('livewire.admin.vehicle-create');
+    }
+
+    protected function storeImageAndGetPath(): string
+    {
+        return $this->newImage->store('vehicles', 'public');
     }
 }

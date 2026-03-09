@@ -1,4 +1,4 @@
-@extends('layouts.app', ['title' => 'Privacy Policy - Xplore Car Imports', 'description' => 'Read the privacy policy for Xplore Car Imports, including data collection, usage, and your rights.'])
+@extends('layouts.app', ['title' => 'Privacy Policy - Xplore Cars Imports', 'description' => 'Read the privacy policy for Xplore Cars Imports, including data collection, usage, and your rights.'])
 
 @section('content')
 <div class="page-shell">
@@ -12,7 +12,7 @@
             <section>
                 <h2 class="text-2xl font-bold mb-4">1. Introduction</h2>
                 <p class="ui-muted leading-relaxed">
-                    Xplore Car Imports ("we", "our", or "us") operates the website and services. This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our service and the choices you have associated with that data.
+                    Xplore Cars Imports ("we", "our", or "us") operates the website and services. This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our service and the choices you have associated with that data.
         `        </p>
             </section>
 
@@ -33,7 +33,7 @@
             <section>
                 <h2 class="text-2xl font-bold mb-4">3. Use of Data</h2>
                 <p class="ui-muted leading-relaxed">
-                    Xplore Car Imports uses the collected data for various purposes:
+                    Xplore Cars Imports uses the collected data for various purposes:
                 </p>
                 <ul class="space-y-2 ui-muted ml-4 mt-4">
                     <li>• To provide and maintain our service</li>

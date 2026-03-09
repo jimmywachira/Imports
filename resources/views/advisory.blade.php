@@ -1,10 +1,10 @@
-@extends('layouts.app', ['title' => 'Advisory - Xplore Car Imports', 'description' => 'Taxi business advisory and masterclass for Kenyan drivers and fleet owners. Learn costs, compliance, and best vehicles.'])
+@extends('layouts.app', ['title' => 'Advisory - Xplore Cars Imports', 'description' => 'Taxi business advisory and masterclass for Kenyan drivers and fleet owners. Learn costs, compliance, and best vehicles.'])
 
 @section('content')
 <div class="page-shell">
     <div class="max-w-5xl mx-auto px-6 py-16">
         <div class="text-center mb-12">
-            <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber-400 mb-4">Advisory</p>
+            <p class="uppercase tracking-[0.2em] text-xs font-semibold text-green-400 mb-4">Advisory</p>
             <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Taxi Business Masterclass</h1>
             <p class="ui-muted text-lg">
                 Our taxi business advisory masterclass helps you join Kenya's online taxi economy with confidence. We cover
@@ -13,7 +13,7 @@
             </p>
             <div class="mt-8 flex flex-wrap justify-center gap-4">
                 <a href="#enroll" class="btn-primary btn-lg">Enroll Now</a>
-                <a href="https://youtube.com" target="_blank" class="btn-outline-amber">
+                <a href="https://youtube.com" target="_blank" class="btn-outline-green">
                     <ion-icon name="logo-youtube" class="text-xl"></ion-icon>
                     Watch on YouTube
                 </a>
@@ -49,7 +49,7 @@
                     <li>Retention: Keep top drivers happy through growth opportunities.</li>
                 </ul>
                 <div class="mt-6">
-                    <a href="https://youtube.com" target="_blank" class="btn-outline-amber">
+                    <a href="https://youtube.com" target="_blank" class="btn-outline-green">
                         <ion-icon name="logo-youtube" class="text-xl"></ion-icon>
                         Watch on YouTube
                     </a>
@@ -109,13 +109,13 @@
         </div>
 
         <div id="enroll" class="mt-12 text-center">
-            <div class="rounded-3xl bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-900 p-8 shadow-xl">
+            <div class="rounded-3xl bg-gradient-to-r from-green-400 to-yellow-300 text-black p-8 shadow-xl">
                 <h2 class="text-3xl font-bold mb-3">Enroll Now</h2>
                 <p class="mb-6 text-slate-800">Get step-by-step guidance, templates, and insights to launch a profitable taxi business.</p>
                 <a href="{{ route('contact') }}" class="btn-ink btn-lg">Talk to Our Team</a>
             </div>
             <div class="mt-6">
-                <a href="{{ route('cars') }}" class="btn-outline-amber btn-sm p-2">Back to Cars Listing</a>
+                <a href="{{ route('cars') }}" class="btn-outline-green btn-sm p-2">Back to Cars Listing</a>
             </div>
         </div>
     </div>

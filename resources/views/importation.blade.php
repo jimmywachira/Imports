@@ -1,26 +1,26 @@
 @extends('layouts.app', [
-    'title' => 'Car Importation Services from Japan to Kenya | Xplore Car Imports',
-    'description' => 'Import your dream car from Japan to Kenya with Xplore Car Imports. We handle sourcing, inspection, customs compliance, shipping, clearing, and delivery. Competitive pricing, flexible payments, and Kenya-compliant vehicles.'
+    'title' => 'Car Importation Services from Japan to Kenya | Xplore Cars Imports',
+    'description' => 'Import your dream car from Japan to Kenya with Xplore Cars Imports. We handle sourcing, inspection, customs compliance, shipping, clearing, and delivery. Competitive pricing, flexible payments, and Kenya-compliant vehicles.'
 ])
 
 @section('content')
 <div class="page-shell">
     {{-- Hero Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="text-center mb-8 sm:mb-12 lg:mb-16">
-            <p class="uppercase tracking-[0.2em] text-xs font-semibold text-amber-400 mb-2 sm:mb-4">Professional Car Importation</p>
+            <p class="uppercase tracking-[0.2em] text-xs font-semibold text-green-400 mb-2 sm:mb-4">Professional Car Importation</p>
             <h1 class="text-2xl sm:text-4xl lg:text-6xl font-extrabold mb-3 sm:mb-6 leading-tight">
                 Find the Right Car, the Right Way
             </h1>
             <p class="text-base sm:text-lg lg:text-xl ui-muted max-w-4xl mx-auto px-3 sm:px-0 mb-6 sm:mb-8">
                 We simplify the process of importing your dream car. Our team of sourcing experts handle everything from car inspection to customs compliance, ensuring every import meets Kenya's strict standards for safety, age, and specification.
             </p>
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center font-semibold text-amber-400 p-2">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center font-semibold text-green-400 p-2">
                 <a href="{{ route('contact') }}" class="btn-primary text-sm sm:text-base w-full sm:w-auto">
                     <ion-icon size="large" name="document-text-outline" class="text-lg sm:text-xl"></ion-icon>
                     Get Free Quote
                 </a>
-                <a href="{{ route('cars') }}" class="btn-outline-amber text-sm sm:text-base w-full sm:w-auto">
+                <a href="{{ route('cars') }}" class="btn-outline-green text-sm sm:text-base w-full sm:w-auto">
                     <ion-icon size="large" name="car-sport-outline" class="text-lg sm:text-xl"></ion-icon>
                     Browse Available Cars
                 </a>
@@ -29,7 +29,7 @@
     </div>
 
     {{-- How It Works Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="text-center mb-8 sm:mb-12">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">How It Works</h2>
             <p class="ui-muted text-sm sm:text-base max-w-2xl mx-auto">
@@ -40,7 +40,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {{-- Step 1 --}}
             <div class="glass-panel p-6 relative">
-                <div class="absolute -top-3 -left-3 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-lg">
+                <div class="absolute -top-3 -left-3 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
                     1
                 </div>
                 <h3 class="text-lg font-semibold mb-3 mt-2">Tell Us Your Needs</h3>
@@ -51,7 +51,7 @@
 
             {{-- Step 2 --}}
             <div class="glass-panel p-6 relative">
-                <div class="absolute -top-3 -left-3 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-lg">
+                <div class="absolute -top-3 -left-3 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
                     2
                 </div>
                 <h3 class="text-lg font-semibold mb-3 mt-2">We Search From Our Japan Network</h3>
@@ -62,7 +62,7 @@
 
             {{-- Step 3 --}}
             <div class="glass-panel p-6 relative">
-                <div class="absolute -top-3 -left-3 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-lg">
+                <div class="absolute -top-3 -left-3 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
                     3
                 </div>
                 <h3 class="text-lg font-semibold mb-3 mt-2">Present Verified Options</h3>
@@ -73,7 +73,7 @@
 
             {{-- Step 4 --}}
             <div class="glass-panel p-6 relative">
-                <div class="absolute -top-3 -left-3 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-lg">
+                <div class="absolute -top-3 -left-3 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
                     4
                 </div>
                 <h3 class="text-lg font-semibold mb-3 mt-2">Reservation</h3>
@@ -84,7 +84,7 @@
 
             {{-- Step 5 --}}
             <div class="glass-panel p-6 relative">
-                <div class="absolute -top-3 -left-3 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-lg">
+                <div class="absolute -top-3 -left-3 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
                     5
                 </div>
                 <h3 class="text-lg font-semibold mb-3 mt-2">Due Diligence</h3>
@@ -95,7 +95,7 @@
 
             {{-- Step 6 --}}
             <div class="glass-panel p-6 relative">
-                <div class="absolute -top-3 -left-3 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-lg">
+                <div class="absolute -top-3 -left-3 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
                     6
                 </div>
                 <h3 class="text-lg font-semibold mb-3 mt-2">Secure Payment</h3>
@@ -106,7 +106,7 @@
 
             {{-- Step 7 --}}
             <div class="glass-panel p-6 relative">
-                <div class="absolute -top-3 -left-3 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-lg">
+                <div class="absolute -top-3 -left-3 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
                     7
                 </div>
                 <h3 class="text-lg font-semibold mb-3 mt-2">Relax While We Ship</h3>
@@ -117,7 +117,7 @@
 
             {{-- Step 8 --}}
             <div class="glass-panel p-6 relative">
-                <div class="absolute -top-3 -left-3 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-lg">
+                <div class="absolute -top-3 -left-3 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
                     8
                 </div>
                 <h3 class="text-lg font-semibold mb-3 mt-2">Clearing and Registration</h3>
@@ -128,7 +128,7 @@
 
             {{-- Step 9 --}}
             <div class="glass-panel p-6 relative">
-                <div class="absolute -top-3 -left-3 w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center font-bold text-slate-900 text-lg">
+                <div class="absolute -top-3 -left-3 w-12 h-12 bg-green-400 rounded-full flex items-center justify-center font-bold text-black text-lg">
                     9
                 </div>
                 <h3 class="text-lg font-semibold mb-3 mt-2">Final Delivery</h3>
@@ -140,7 +140,7 @@
     </div>
 
     {{-- Why Choose Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="text-center mb-8 sm:mb-12">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Why Choose Our Car Importation?</h2>
             <p class="ui-muted text-sm sm:text-base max-w-2xl mx-auto">
@@ -150,9 +150,9 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {{-- High-Grade Quality --}}
-            <div class="glass-panel p-6 hover:border-amber-400 transition-colors">
-                <div class="w-14 h-14 bg-amber-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
-                    <ion-icon name="star-outline" class="text-2xl text-slate-900"></ion-icon>
+            <div class="glass-panel p-6 hover:border-green-400 transition-colors">
+                <div class="w-14 h-14 bg-green-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
+                    <ion-icon name="star-outline" class="text-2xl text-black"></ion-icon>
                 </div>
                 <h3 class="text-lg font-semibold mb-3">High-Grade Quality Cars</h3>
                 <p class="ui-muted text-sm">
@@ -161,9 +161,9 @@
             </div>
 
             {{-- Due Diligence --}}
-            <div class="glass-panel p-6 hover:border-amber-400 transition-colors">
-                <div class="w-14 h-14 bg-amber-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
-                    <ion-icon name="search-outline" class="text-2xl text-slate-900"></ion-icon>
+            <div class="glass-panel p-6 hover:border-green-400 transition-colors">
+                <div class="w-14 h-14 bg-green-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
+                    <ion-icon name="search-outline" class="text-2xl text-black"></ion-icon>
                 </div>
                 <h3 class="text-lg font-semibold mb-3">Thorough Due Diligence</h3>
                 <p class="ui-muted text-sm">
@@ -172,9 +172,9 @@
             </div>
 
             {{-- Flexible Payment --}}
-            <div class="glass-panel p-6 hover:border-amber-400 transition-colors">
-                <div class="w-14 h-14 bg-amber-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
-                    <ion-icon name="card-outline" class="text-2xl text-slate-900"></ion-icon>
+            <div class="glass-panel p-6 hover:border-green-400 transition-colors">
+                <div class="w-14 h-14 bg-green-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
+                    <ion-icon name="card-outline" class="text-2xl text-black"></ion-icon>
                 </div>
                 <h3 class="text-lg font-semibold mb-3">Flexible Payment Options</h3>
                 <p class="ui-muted text-sm">
@@ -183,9 +183,9 @@
             </div>
 
             {{-- Competitive Pricing --}}
-            <div class="glass-panel p-6 hover:border-amber-400 transition-colors">
-                <div class="w-14 h-14 bg-amber-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
-                    <ion-icon name="pricetag-outline" class="text-2xl text-slate-900"></ion-icon>
+            <div class="glass-panel p-6 hover:border-green-400 transition-colors">
+                <div class="w-14 h-14 bg-green-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
+                    <ion-icon name="pricetag-outline" class="text-2xl text-black"></ion-icon>
                 </div>
                 <h3 class="text-lg font-semibold mb-3">Competitive Pricing</h3>
                 <p class="ui-muted text-sm">
@@ -194,9 +194,9 @@
             </div>
 
             {{-- Kenya Compliant --}}
-            <div class="glass-panel p-6 hover:border-amber-400 transition-colors">
-                <div class="w-14 h-14 bg-amber-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
-                    <ion-icon name="shield-checkmark-outline" class="text-2xl text-slate-900"></ion-icon>
+            <div class="glass-panel p-6 hover:border-green-400 transition-colors">
+                <div class="w-14 h-14 bg-green-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
+                    <ion-icon name="shield-checkmark-outline" class="text-2xl text-black"></ion-icon>
                 </div>
                 <h3 class="text-lg font-semibold mb-3">Kenya-Compliant Vehicles</h3>
                 <p class="ui-muted text-sm">
@@ -205,9 +205,9 @@
             </div>
 
             {{-- Fast Sourcing --}}
-            <div class="glass-panel p-6 hover:border-amber-400 transition-colors">
-                <div class="w-14 h-14 bg-amber-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
-                    <ion-icon name="flash-outline" class="text-2xl text-slate-900"></ion-icon>
+            <div class="glass-panel p-6 hover:border-green-400 transition-colors">
+                <div class="w-14 h-14 bg-green-400 rounded-xl flex items-center justify-center mb-4 flex-shrink-0">
+                    <ion-icon name="flash-outline" class="text-2xl text-black"></ion-icon>
                 </div>
                 <h3 class="text-lg font-semibold mb-3">Fast and Reliable Sourcing</h3>
                 <p class="ui-muted text-sm">
@@ -218,14 +218,14 @@
     </div>
 
     {{-- Business Opportunity Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="glass-panel rounded-3xl p-6 sm:p-8 lg:p-12">
             <div class="text-center mb-8 sm:mb-12">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-amber-400 rounded-full mb-4">
-                    <ion-icon name="business-outline" class="text-3xl text-slate-900"></ion-icon>
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-green-400 rounded-full mb-4">
+                    <ion-icon name="business-outline" class="text-3xl text-black"></ion-icon>
                 </div>
                 <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
-                    Xplore Car Imports: A Business Opportunity on Wheels
+                    Xplore Cars Imports: A Business Opportunity on Wheels
                 </h2>
                 <p class="text-base sm:text-lg ui-muted max-w-3xl mx-auto">
                     We don't just import cars for personal use—we empower entrepreneurs and drivers to start or expand their ride-hailing businesses. Every vehicle we recommend for online taxi services, corporate transport, or personal hire has been carefully evaluated for efficiency, durability, and profitability.
@@ -236,26 +236,26 @@
                 {{-- Smart Car Selection --}}
                 <div class="space-y-4">
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-amber-400 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <ion-icon name="car-outline" class="text-xl text-slate-900"></ion-icon>
+                        <div class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <ion-icon name="car-outline" class="text-xl text-black"></ion-icon>
                         </div>
                         <div>
                             <h3 class="text-lg font-semibold mb-2">Smart Car Selection for Ride Hailing</h3>
                             <ul class="space-y-2 ui-muted text-sm">
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Fuel-efficient and reliable models ideal for platforms like Uber, Bolt, and Little Cab</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Long-lasting cars with low maintenance costs and high resale value</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Guidance on hybrid and economy options that maximize profit margins</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Access to verified units already registered for commercial use</span>
                                 </li>
                             </ul>
@@ -266,26 +266,26 @@
                 {{-- Driver Recruitment --}}
                 <div class="space-y-4">
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-amber-400 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <ion-icon name="people-outline" class="text-xl text-slate-900"></ion-icon>
+                        <div class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <ion-icon name="people-outline" class="text-xl text-black"></ion-icon>
                         </div>
                         <div>
                             <h3 class="text-lg font-semibold mb-2">Driver Recruitment & Partnership Support</h3>
                             <ul class="space-y-2 ui-muted text-sm">
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Assistance connecting qualified drivers with available vehicles</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Flexible payment and lease plans to help new drivers get started</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Consultation on driving experience, professionalism, and customer service</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Guided onboarding for those seeking to build long-term transport businesses</span>
                                 </li>
                             </ul>
@@ -296,22 +296,22 @@
                 {{-- Business Support --}}
                 <div class="space-y-4">
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-amber-400 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <ion-icon name="briefcase-outline" class="text-xl text-slate-900"></ion-icon>
+                        <div class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <ion-icon name="briefcase-outline" class="text-xl text-black"></ion-icon>
                         </div>
                         <div>
                             <h3 class="text-lg font-semibold mb-2">Business Support</h3>
                             <ul class="space-y-2 ui-muted text-sm">
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Guidance on business setup for individuals and small fleets</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Advisory on tax, insurance, and operational cost management</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Ongoing mentorship for sustainable car-based income</span>
                                 </li>
                             </ul>
@@ -322,26 +322,26 @@
                 {{-- Local Support --}}
                 <div class="space-y-4">
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-amber-400 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <ion-icon name="construct-outline" class="text-xl text-slate-900"></ion-icon>
+                        <div class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <ion-icon name="construct-outline" class="text-xl text-black"></ion-icon>
                         </div>
                         <div>
                             <h3 class="text-lg font-semibold mb-2">Local Support & Maintenance Network</h3>
                             <ul class="space-y-2 ui-muted text-sm">
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Links to trusted local garages and service centers</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Access to affordable spare parts and bodywork services</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>Continuous technical support and maintenance guidance</span>
                                 </li>
                                 <li class="flex items-start gap-2">
-                                    <ion-icon name="checkmark-circle" class="text-amber-400 flex-shrink-0 mt-0.5"></ion-icon>
+                                    <ion-icon name="checkmark-circle" class="text-green-400 flex-shrink-0 mt-0.5"></ion-icon>
                                     <span>After-sales support to keep your vehicle business running efficiently</span>
                                 </li>
                             </ul>
@@ -360,7 +360,7 @@
     </div>
 
     {{-- Popular Cars Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <div class="text-center mb-8 sm:mb-12">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">Popular Cars We Source for Kenya</h2>
             <p class="ui-muted text-sm sm:text-base max-w-2xl mx-auto">
@@ -372,8 +372,8 @@
             {{-- Popular Taxi Vehicles --}}
             <div class="glass-panel p-6 sm:p-8">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-12 h-12 bg-amber-400 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <ion-icon name="car-sport-outline" class="text-xl text-slate-900"></ion-icon>
+                    <div class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <ion-icon name="car-sport-outline" class="text-xl text-black"></ion-icon>
                     </div>
                     <h3 class="text-xl font-semibold">Popular Taxi Vehicles</h3>
                 </div>
@@ -393,8 +393,8 @@
             {{-- Fuel-Efficient Hatchbacks --}}
             <div class="glass-panel p-6 sm:p-8">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-12 h-12 bg-amber-400 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <ion-icon name="leaf-outline" class="text-xl text-slate-900"></ion-icon>
+                    <div class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <ion-icon name="leaf-outline" class="text-xl text-black"></ion-icon>
                     </div>
                     <h3 class="text-xl font-semibold">Fuel-Efficient Hatchbacks</h3>
                 </div>
@@ -413,8 +413,8 @@
             {{-- Family & Executive Sedans --}}
             <div class="glass-panel p-6 sm:p-8">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-12 h-12 bg-amber-400 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <ion-icon name="people-circle-outline" class="text-xl text-slate-900"></ion-icon>
+                    <div class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <ion-icon name="people-circle-outline" class="text-xl text-black"></ion-icon>
                     </div>
                     <h3 class="text-xl font-semibold">Family & Executive Sedans</h3>
                 </div>
@@ -433,8 +433,8 @@
             {{-- SUVs --}}
             <div class="glass-panel p-6 sm:p-8">
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="w-12 h-12 bg-amber-400 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <ion-icon name="trail-sign-outline" class="text-xl text-slate-900"></ion-icon>
+                    <div class="w-12 h-12 bg-green-400 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <ion-icon name="trail-sign-outline" class="text-xl text-black"></ion-icon>
                     </div>
                     <h3 class="text-xl font-semibold">SUVs for Business or Private Use</h3>
                 </div>
@@ -452,7 +452,7 @@
         </div>
 
         <div class="mt-8 text-center">
-            <a href="{{ route('cars') }}" class="btn-outline-amber text-sm sm:text-base">
+            <a href="{{ route('cars') }}" class="btn-outline-green text-sm sm:text-base">
                 <ion-icon name="search-outline" class="text-lg sm:text-xl"></ion-icon>
                 Explore All Available Cars
             </a>
@@ -460,8 +460,8 @@
     </div>
 
     {{-- CTA Section --}}
-    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div class="glass-panel rounded-3xl p-8 sm:p-12 lg:p-16 text-center bg-gradient-to-br from-amber-400/10 to-amber-600/10 border-amber-400/30">
+    <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div class="glass-panel rounded-3xl p-8 sm:p-12 lg:p-16 text-center bg-gradient-to-br from-green-400/10 to-green-600/10 border-green-400/30">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
                 Ready to Import Your Dream Car from Japan?
             </h2>
@@ -473,13 +473,13 @@
                     <ion-icon name="mail-outline" class="text-lg sm:text-xl"></ion-icon>
                     Get Your Free Quote
                 </a>
-                <a href="https://wa.me/254757356989" target="_blank" class="btn-outline-amber text-sm sm:text-base w-full sm:w-auto">
+                <a href="https://wa.me/254757356989" target="_blank" class="btn-outline-green text-sm sm:text-base w-full sm:w-auto">
                     <ion-icon name="logo-whatsapp" class="text-lg sm:text-xl"></ion-icon>
                     Chat on WhatsApp
                 </a>
             </div>
             <p class="text-xs sm:text-sm ui-muted mt-6">
-                <ion-icon name="shield-checkmark-outline" class="text-amber-400"></ion-icon>
+                <ion-icon name="shield-checkmark-outline" class="text-green-400"></ion-icon>
                 All vehicles are KEBS compliant and meet Kenya's 8-year import age limit
             </p>
         </div>
