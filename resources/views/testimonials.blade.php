@@ -68,6 +68,25 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+
+        <article class="group glass-panel rounded-3xl overflow-hidden border border-white/20 transition-all duration-300 hover:border-green-400/50 hover:shadow-2xl hover:shadow-green-500/20">
+                <div class="aspect-video w-full overflow-hidden">
+                    <iframe
+                        class="w-full h-full"
+                        src="https://youtu.be/ubvbEjIL2Mk?si=25WiDuVU-S75ZVsg"
+                        title="Client Testimonial 1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        loading="lazy"
+                    ></iframe>
+                </div>
+                <div class="p-5 sm:p-6">
+                    <p class="text-base font-bold mb-1">First-Time Import Success Story</p>
+                    <p class="ui-muted text-sm">Private Vehicle Owner</p>
+                </div>
+            </article>
+
             <article class="group glass-panel rounded-3xl overflow-hidden border border-white/20 transition-all duration-300 hover:border-green-400/50 hover:shadow-2xl hover:shadow-green-500/20">
                 <div class="aspect-video w-full overflow-hidden">
                     <iframe
