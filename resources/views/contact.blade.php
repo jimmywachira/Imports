@@ -21,7 +21,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             <!-- Contact Form Section - Spans 2 columns -->
             <div class="lg:col-span-2">
-                <div class="bg-white dark:bg-slate-800/50 rounded-2xl shadow-sm border border-black/10 dark:border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-sm">
+                <div class="bg-white dark:bg-blue-900 rounded-2xl shadow-sm border border-black/10 dark:border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-sm">
                     <!-- Form Header -->
                     <div class="mb-8 sm:mb-10">
                         <h2 class="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
@@ -86,7 +86,7 @@
                                     value="{{ old('name') }}"
                                     placeholder="John Doe"
                                     required
-                                    class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-black/20 dark:border-black/40 bg-white dark:bg-slate-700 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
+                                    class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-black/20 dark:border-black/40 bg-white dark:bg-blue-600 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
                                     @error('name') border-red-500 focus:ring-red-500 @enderror"
                                 />
                                 @error('name')
@@ -109,7 +109,7 @@
                                     value="{{ old('email') }}"
                                     placeholder="john@example.com"
                                     required
-                                    class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-black/20 dark:border-black/40 bg-white dark:bg-slate-700 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
+                                    class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-black/20 dark:border-black/40 bg-white dark:bg-blue-600 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
                                     @error('email') border-red-500 focus:ring-red-500 @enderror"
                                 />
                                 @error('email')
@@ -133,7 +133,7 @@
                                 value="{{ old('phone') }}"
                                 placeholder="+254 757 356 989"
                                 required
-                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-black/20 dark:border-black/40 bg-white dark:bg-slate-700 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
+                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-black/20 dark:border-black/40 bg-white dark:bg-blue-600 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200
                                 @error('phone') border-red-500 focus:ring-red-500 @enderror"
                             />
                             @error('phone')
@@ -153,7 +153,7 @@
                                 id="subject"
                                 name="subject"
                                 required
-                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-black/20 dark:border-black/40 bg-white dark:bg-slate-700 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer
+                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-black/20 dark:border-black/40 bg-white dark:bg-blue-600 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 appearance-none cursor-pointer
                                 @error('subject') border-red-500 focus:ring-red-500 @enderror"
                                 style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 fill=%22none%22 viewBox=%220 0 20 20%22%3E%3Cpath stroke=%22%236B7280%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22 stroke-width=%221.5%22 d=%22M6 8l4 4 4-4%22/%3E%3C/svg%3E'); background-position: right 0.5rem center; background-repeat: no-repeat; background-size: 1.5em 1.5em; padding-right: 2.5rem;"
                             >
@@ -182,7 +182,7 @@
                                 rows="5"
                                 placeholder="Tell us more about your inquiry..."
                                 required
-                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-black/20 dark:border-black/40 bg-white dark:bg-slate-700 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 resize-none
+                                class="w-full px-4 py-3 sm:py-3.5 rounded-lg border border-black/20 dark:border-black/40 bg-white dark:bg-blue-600 text-black dark:text-white placeholder-black/50 dark:placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 resize-none
                                 @error('message') border-red-500 focus:ring-red-500 @enderror"
                             >{{ old('message') }}</textarea>
                             <p class="mt-2 text-xs text-blue-500 dark:text-blue-400">Minimum 10 characters</p>
@@ -200,7 +200,7 @@
                             class="w-full py-3 sm:py-3.5 px-6 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg flex items-center justify-center gap-2 group"
                         >
                             <span>Send Message</span>
-                            <ion-icon name="send" class="text-lg group-hover:tranblue-x-1 transition-transform duration-200"></ion-icon>
+                            <ion-icon name="send" class="text-lg group-hover:translate-x-1 transition-transform duration-200"></ion-icon>
                         </button>
 
                         <p class="text-xs text-blue-500 dark:text-blue-400 text-center">
@@ -214,70 +214,70 @@
             <div class="lg:col-span-1">
                 <div class="space-y-5 sm:space-y-6">
                     <!-- Phone Card -->
-                    <div class="group bg-white dark:bg-slate-800/50 rounded-xl border border-black/10 dark:border-white/10 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-green-500/30">
+                    <div class="group bg-white dark:bg-blue-900 rounded-xl border border-black/10 dark:border-white/10 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-green-500/30">
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-green-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                 <ion-icon name="call" class="text-lg text-white"></ion-icon>
                             </div>
                             <div class="flex-1 min-w-0">
-                                <h3 class="text-sm font-semibold text-black dark:text-white mb-0.5">Phone</h3>
+                                <h3 class="text-sm font-semibold text-black dark:text-white mb-0.5">Call or Text Us</h3>
                                 <p class="text-sm font-medium text-green-600 dark:text-green-400 break-all">+254 757 356 989</p>
-                                <p class="text-xs text-blue-500 dark:text-blue-400 mt-1.5">Available 24/7</p>
+                                <p class="text-sm text-blue-500 dark:text-blue-400 mt-1.5">Available 24/7</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- WhatsApp Card -->
-                    <div class="group bg-white dark:bg-slate-800/50 rounded-xl border border-black/10 dark:border-white/10 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-green-500/30">
+                    <div class="group bg-white dark:bg-blue-900 rounded-xl border border-black/10 dark:border-white/10 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-green-500/30">
                         <a href="https://wa.me/254757356989" target="_blank" class="flex items-start gap-4 cursor-pointer">
-                            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                 <ion-icon name="logo-whatsapp" class="text-lg text-white"></ion-icon>
                             </div>
                             <div class="flex-1 min-w-0">
                                 <h3 class="text-sm font-semibold text-black dark:text-white mb-0.5">WhatsApp</h3>
                                 <p class="text-sm font-medium text-green-600 dark:text-green-400 break-all hover:underline transition-colors">+254 757 356 989</p>
-                                <p class="text-xs text-blue-500 dark:text-blue-400 mt-1.5">Chat with us instantly</p>
+                                <p class="text-sm text-blue-500 dark:text-blue-400 mt-1.5">Chat with us instantly</p>
                             </div>
                         </a>
                     </div>
 
                     <!-- Email Card -->
-                    <div class="group bg-white dark:bg-slate-800/50 rounded-xl border border-black/10 dark:border-white/10 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-black/500/30">
+                    <div class="group bg-white dark:bg-blue-900 rounded-xl border border-black/10 dark:border-white/10 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-green-500/30">
                         <a href="mailto:info@xplorecar.com" class="flex items-start gap-4 cursor-pointer">
-                            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                 <ion-icon name="mail" class="text-lg text-white"></ion-icon>
                             </div>
                             <div class="flex-1 min-w-0">
                                 <h3 class="text-sm font-semibold text-black dark:text-white mb-0.5">Email</h3>
-                                <p class="text-sm font-medium text-black/60 dark:text-white/70 break-all hover:underline transition-colors">info@xplorecar.com</p>
-                                <p class="text-xs text-blue-500 dark:text-blue-400 mt-1.5">Response within 2 hours</p>
+                                <p class="text-sm font-medium text-green-600 dark:text-green-400 break-all hover:underline transition-colors">info@xplorecar.com</p>
+                                <p class="text-sm text-green-500 dark:text-green-400 mt-1.5">Response within 2 hours</p>
                             </div>
                         </a>
                     </div>
 
                     <!-- Location Card -->
-                    <div class="group bg-white dark:bg-slate-800/50 rounded-xl border border-black/10 dark:border-white/10 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-purple-500/30">
+                    <div class="group bg-white dark:bg-blue-900 rounded-xl border border-black/10 dark:border-white/10 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-purple-500/30">
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                 <ion-icon name="location" class="text-lg text-white"></ion-icon>
                             </div>
                             <div class="flex-1 min-w-0">
                                 <h3 class="text-sm font-semibold text-black dark:text-white mb-0.5">Office Location</h3>
                                 <p class="text-sm text-black/70 dark:text-white/80 break-words">New Rain, Kenyatta Road, Nairobi</p>
-                                <p class="text-xs text-blue-500 dark:text-blue-400 mt-1.5">Visit by appointment</p>
+                                <p class="text-sm text-purple-500 dark:text-purple-400 mt-1.5">Visit by appointment</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Hours Card -->
-                    <div class="group bg-white dark:bg-slate-800/50 rounded-xl border border-black/10 dark:border-white/10 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-indigo-500/30">
+                    <div class="group bg-white dark:bg-blue-900 rounded-xl border border-black/10 dark:border-white/10 p-5 sm:p-6 hover:shadow-md transition-all duration-300 backdrop-blur-sm hover:border-indigo-500/30">
                         <div class="flex items-start gap-4">
-                            <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                 <ion-icon name="time" class="text-lg text-white"></ion-icon>
                             </div>
                             <div class="flex-1 min-w-0">
                                 <h3 class="text-sm font-semibold text-black dark:text-white mb-2">Business Hours</h3>
-                                <div class="space-y-1 text-xs text-black/70 dark:text-white/80">
+                                <div class="space-y-1 text-sm text-black/70 dark:text-white/80">
                                     <p><span class="font-medium">Mon - Fri:</span> 8:00 AM - 6:00 PM</p>
                                     <p><span class="font-medium">Sat - Sun:</span> 10:00 AM - 4:00 PM</p>
                                 </div>
@@ -291,7 +291,7 @@
                             <div class="text-3xl mt-0.5">⚡</div>
                             <div>
                                 <h4 class="text-sm font-semibold text-green-900 dark:text-green-100 mb-1">Quick Support</h4>
-                                <p class="text-xs text-green-800 dark:text-green-200 leading-relaxed">Get instant assistance with our WhatsApp support. We're here to help you find the perfect vehicle.</p>
+                                <p class="text-sm text-green-800 dark:text-green-200 leading-relaxed">Get instant assistance with our WhatsApp support. We're here to help you find the perfect vehicle.</p>
                             </div>
                         </div>
                     </div>

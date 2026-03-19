@@ -1,7 +1,7 @@
 <div class="page-shell">
     <div class="w-full lg:w-3/4 mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <header class="relative overflow-hidden rounded-3xl bg-linear-to-r from-green-500 via-green-400 to-green-300 text-slate-900 shadow-2xl mb-8 sm:mb-10">
-            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,rgba(0,0,0,0.6),transparent_60%)]"></div>
+            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top,rgba(72,187,120),transparent_60%)]"></div>
             <div class="relative p-6 sm:p-8 lg:p-12">
                 <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                     <div class="space-y-3 max-w-3xl">
@@ -14,14 +14,14 @@
                         <p class="text-xs uppercase tracking-wide text-slate-800/80">Current Listings</p>
                         <div class="flex items-end gap-2 mt-1">
                             <span class="text-3xl font-extrabold text-slate-900">{{ $cars->total() }}</span>
-                            <span class="text-sm text-slate-700 mb-1">vehicles</span>
+                            <span class="text-sm text-slate-700 mb-1">vehicles</span> 
                         </div>
                     </div>
                 </div>
             </div>
         </header>
 
-        <section class="glass-panel p-4 sm:p-6 rounded-2xl mb-6">
+        <section class="glass-panel p-4 sm:p-6 rounded-2xl mb-6 border-green-600 border bg-green-300/10 backdrop-blur-sm">
             <h2 class="text-lg sm:text-xl font-semibold mb-2">Japan Car Imports in Kenya</h2>
             <p class="ui-muted text-sm sm:text-base">Explore KEBS-compliant import cars from Japan with verified inspection reports, transparent CIF pricing, and end-to-end shipping and customs clearing support.</p>
             <div class="mt-4 flex flex-wrap gap-2 sm:gap-3 text-xs sm:text-sm">
@@ -40,126 +40,128 @@
             </div>
         </section>
 
-        <div class="glass-panel rounded-2xl p-6 sm:p-8 mb-8 sm:mb-10 border border-white/10 backdrop-blur-xl">
-            <!-- Header with Title and Reset -->
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 pb-8 border-b border-white/10">
-                <div>
-                    <h2 class="text-xl sm:text-2xl font-bold text-white mb-1 flex items-center gap-2">
-                        <ion-icon name="filter-outline" class="text-2xl sm:text-3xl text-green-400"></ion-icon>
-                        <span>Find Your Perfect Vehicle</span>
+        <div class="glass-panel rounded-2xl p-4 sm:p-5 lg:p-6 mb-6 sm:mb-8 border border-white/20 backdrop-blur-xl">
+            <!-- Premium Header with Visual Hierarchy -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6 pb-4 border-b border-white/15">
+                <div class="space-y-0.5">
+                    <h2 class="text-lg sm:text-xl lg:text-2xl font-black flex items-center gap-2">
+                        <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-linear-to-br from-emerald-400 to-cyan-400 text-black">
+                            <ion-icon name="filter-outline" class="text-lg"></ion-icon>
+                        </span>
+                        <span>Refine Your Search</span>
                     </h2>
-                    <p class="text-xs sm:text-sm text-slate-400">Use filters below to narrow down your search</p>
+                    <p class="text-xs ui-muted">Narrow down by specs, price, and year</p>
                 </div>
-                <button wire:click="resetFilters" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-slate-700 to-slate-600 hover:from-slate-600 hover:to-slate-500 text-white text-sm font-semibold transition-all duration-200 hover:scale-105 active:scale-95 border border-slate-500/50">
-                    <ion-icon name="refresh-outline" class="text-lg"></ion-icon>
-                    <span>Reset All</span>
+                <button wire:click="resetFilters" class="group inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-emerald-400 hover:text-emerald-300 text-xs sm:text-sm font-semibold transition-all duration-200 border border-white/20 hover:border-emerald-400/50 active:scale-95 whitespace-nowrap">
+                    <ion-icon name="refresh-outline" class="text-base group-hover:rotate-180 transition-transform duration-500"></ion-icon>
+                    <span>Reset</span>
                 </button>
             </div>
 
-            <!-- Search Bar - Full Width -->
-            <div class="mb-8">
-                <div class="form-control p-1">
-                    <label class="label mb-3">
-                        <div class="flex items-center gap-2">
-                            <div class="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center">
-                                <ion-icon name="search-outline" class="text-base text-green-400"></ion-icon>
-                            </div>
-                            <span class="label-text text-sm font-semibold text-white dark:text-black">Quick Search</span>
-                        </div>
+            <!-- Search Bar - Enhanced -->
+            <div class="mb-5">
+                <div class="relative group">
+                    <label class="block mb-2">
+                        <span class="text-xs font-bold uppercase tracking-widest text-slate-300 flex items-center gap-1.5">
+                            <ion-icon name="search-outline" class="text-sm text-emerald-400"></ion-icon>
+                            Quick Search
+                        </span>
                     </label>
-                    <div class="relative">
-                        <input
-                            type="text"
-                            wire:model.live.debounce.300ms="search"
-                            placeholder="Search by make, model, or VIN..."
-                            class="ui-input w-full pl-4 pr-4 px-2 py-3 text-sm placeholder-slate-500 bg-white/5 border border-white/10 rounded-xl focus:bg-white/10 focus:border-green-400/50 transition-all duration-200"
-                        />
+                    <input
+                        type="text"
+                        wire:model.live.debounce.300ms="search"
+                        placeholder="Search by make, model, or VIN..."
+                        class="w-full px-4 py-2.5 text-sm placeholder-slate-500 bg-white/5 border border-white/15 rounded-xl focus:bg-white/10 focus:border-emerald-400/60 focus:outline-none transition-all duration-200 group-hover:border-white/25"
+                    />
+                    <div class="absolute right-3 top-9 pointer-events-none text-slate-500 group-focus-within:text-emerald-400 transition-colors">
+                        <ion-icon name="checkmark-circle-outline" class="text-sm opacity-0 group-focus-within:opacity-100 transition-opacity"></ion-icon>
                     </div>
                 </div>
             </div>
 
-            <!-- Filter Grid - Organized Sections -->
-            <div class="grid grid-cols-1 p-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Vehicle Type & Make -->
-                <div class="form-control">
-                    <label class="label mb-3">
-                        <div class="flex items-center gap-2">
-                            <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
-                                <ion-icon name="car-outline" class="text-base text-blue-400"></ion-icon>
-                            </div>
-                            <span class="label-text text-sm font-semibold text-white dark:text-black">Make</span>
-                        </div>
-                    </label>
-                    <select wire:model.live="make" class="ui-select p-1.5 text-sm bg-white/5 border border-white/10 rounded focus:border-blue-400/50 focus:bg-white/10 transition-all duration-200">
-                        <option value="" class="bg-blue-600/50 p-2">All Makes</option>
-                        @foreach($this->makes as $makeName)
-                            <option value="{{ $makeName }}" class="bg-blue-600/50 p-2">{{ $makeName }}</option>
-                        @endforeach
-                    </select>
-                </div>
+            <!-- Primary Filters Section -->
+            <div class="mb-5">
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Vehicle Details</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <!-- Make Filter -->
+                    <div class="form-control group">
+                        <label class="label mb-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-slate-300 flex items-center gap-1.5">
+                                <ion-icon name="car-outline" class="text-sm text-emerald-400"></ion-icon>
+                                Make
+                            </span>
+                        </label>
+                        <select wire:model.live="make" class="w-full px-3 py-2 text-sm bg-white/5 border border-white/15 rounded-lg hover:border-white/25 focus:bg-white/10 focus:border-emerald-400/60 focus:outline-none transition-all duration-200 appearance-none cursor-pointer font-medium">
+                            <option value="" class="bg-slate-900">All Makes</option>
+                            @foreach($this->makes as $makeName)
+                                <option value="{{ $makeName }}" class="bg-slate-900">{{ $makeName }}</option>
+                            @endforeach
+                        </select>
+                        <ion-icon name="chevron-down-outline" class="absolute right-3 top-9 text-slate-400 pointer-events-none text-base"></ion-icon>
+                    </div>
 
-                <!-- Transmission -->
-                <div class="form-control p-1">
-                    <label class="label mb-3">
-                        <div class="flex items-center gap-2">
-                            <div class="w-8 h-8 rounded p-2 bg-purple-500/20 flex items-center justify-center">
-                                <ion-icon name="settings-outline" class="text-base text-purple-400"></ion-icon>
-                            </div>
-                            <span class="label-text text-sm font-semibold text-white dark:text-black">Transmission</span>
-                        </div>
-                    </label>
-                    <select wire:model.live="transmission" class="ui-select p-1.5 text-sm bg-white/5 border border-white/10 rounded focus:border-purple-400/50 focus:bg-white/10 transition-all duration-200">
-                        <option value="" class=" p-2">All Types</option>
-                        <option value="Automatic" class=" p-2">Automatic</option>
-                        <option value="Manual" class=" p-2">Manual</option>
-                    </select>
-                </div>
+                    <!-- Transmission Filter -->
+                    <div class="form-control group">
+                        <label class="label mb-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-slate-300 flex items-center gap-1.5">
+                                <ion-icon name="settings-outline" class="text-sm text-emerald-400"></ion-icon>
+                                Transmission
+                            </span>
+                        </label>
+                        <select wire:model.live="transmission" class="w-full px-3 py-2 text-sm bg-white/5 border border-white/15 rounded-lg hover:border-white/25 focus:bg-white/10 focus:border-emerald-400/60 focus:outline-none transition-all duration-200 appearance-none cursor-pointer font-medium">
+                            <option value="" class="bg-slate-900">All Types</option>
+                            <option value="Automatic" class="bg-slate-900">Automatic</option>
+                            <option value="Manual" class="bg-slate-900">Manual</option>
+                        </select>
+                        <ion-icon name="chevron-down-outline" class="absolute right-3 top-9 text-slate-400 pointer-events-none text-base"></ion-icon>
+                    </div>
 
-                <!-- Fuel Type -->
-                <div class="form-control p-1">
-                    <label class="label mb-3">
-                        <div class="flex items-center gap-2">
-                            <div class="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center">
-                                <ion-icon name="flash-outline" class="text-base text-orange-400"></ion-icon>
-                            </div>
-                            <span class="label-text text-sm font-semibold text-white dark:text-black">Fuel Type</span>
-                        </div>
-                    </label>
-                    <select wire:model.live="fuelType" class="ui-select p-1.5 text-sm bg-white/5 border border-white/10 rounded focus:border-orange-400/50 focus:bg-white/10 transition-all duration-200">
-                        <option value="" class="bg-blue-600/50 p-2">All Types</option>
-                        <option value="Petrol" class="bg-blue-600/50 p-2">Petrol</option>
-                        <option value="Diesel" class="bg-blue-600/50 p-2">Diesel</option>
-                        <option value="Hybrid" class="bg-blue-600/50 p-2">Hybrid</option>
-                    </select>
-                </div>
+                    <!-- Fuel Type Filter -->
+                    <div class="form-control group">
+                        <label class="label mb-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-slate-300 flex items-center gap-1.5">
+                                <ion-icon name="flash-outline" class="text-sm text-emerald-400"></ion-icon>
+                                Fuel
+                            </span>
+                        </label>
+                        <select wire:model.live="fuelType" class="w-full px-3 py-2 text-sm bg-white/5 border border-white/15 rounded-lg hover:border-white/25 focus:bg-white/10 focus:border-emerald-400/60 focus:outline-none transition-all duration-200 appearance-none cursor-pointer font-medium">
+                            <option value="" class="bg-slate-900">All Types</option>
+                            <option value="Petrol" class="bg-slate-900">Petrol</option>
+                            <option value="Diesel" class="bg-slate-900">Diesel</option>
+                            <option value="Hybrid" class="bg-slate-900">Hybrid</option>
+                        </select>
+                        <ion-icon name="chevron-down-outline" class="absolute right-3 top-9 text-slate-400 pointer-events-none text-base"></ion-icon>
+                    </div>
 
-                <!-- Sort By -->
-                <div class="form-control p-1">
-                    <label class="label mb-3">
-                        <div class="flex items-center gap-2">
-                            <div class="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center">
-                                <ion-icon name="swap-vertical-outline" class="text-base text-indigo-400"></ion-icon>
-                            </div>
-                            <span class="label-text text-sm font-semibold text-white dark:text-black p-2">Sort By</span>
-                        </div>
-                    </label>
-                    <select wire:model.live="sortBy" class="ui-select p-1.5 text-sm bg-white/5 border border-white/10 rounded focus:border-indigo-400/50 focus:bg-white/10 transition-all duration-200">
-                        <option value="newest" class="bg-blue-600/50 p-2">Newest First</option>
-                        <option value="price_low" class="bg-blue-600/50 p-2">Price: Low to High</option>
-                        <option value="price_high" class="bg-blue-600/50 p-2">Price: High to Low</option>
-                        <option value="year_new" class="bg-blue-600/50 p-2">Year: Newest First</option>
-                        <option value="year_old" class="bg-blue-600/50 p-2">Year: Oldest First</option>
-                        <option value="mileage_low" class="bg-blue-600/50 p-2">Mileage: Low to High</option>
-                    </select>
+                    <!-- Sort By Filter -->
+                    <div class="form-control group">
+                        <label class="label mb-2">
+                            <span class="text-xs font-bold uppercase tracking-widest text-slate-300 flex items-center gap-1.5">
+                                <ion-icon name="swap-vertical-outline" class="text-sm text-emerald-400"></ion-icon>
+                                Sort By
+                            </span>
+                        </label>
+                        <select wire:model.live="sortBy" class="w-full px-3 py-2 text-sm bg-white/5 border border-white/15 rounded-lg hover:border-white/25 focus:bg-white/10 focus:border-emerald-400/60 focus:outline-none transition-all duration-200 appearance-none cursor-pointer font-medium">
+                            <option value="newest" class="bg-slate-900">Newest First</option>
+                            <option value="price_low" class="bg-slate-900">Price: Low to High</option>
+                            <option value="price_high" class="bg-slate-900">Price: High to Low</option>
+                            <option value="year_new" class="bg-slate-900">Year: Newest</option>
+                            <option value="year_old" class="bg-slate-900">Year: Oldest</option>
+                            <option value="mileage_low" class="bg-slate-900">Mileage: Low to High</option>
+                        </select>
+                        <ion-icon name="chevron-down-outline" class="absolute right-3 top-9 text-slate-400 pointer-events-none text-base"></ion-icon>
+                    </div>
                 </div>
             </div>
 
-            <!-- Year & Price Range -->
-            <div class="mt-6 pt-6 border-t border-white/10">
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    <div class="form-control p-1">
-                        <label class="label mb-2">
-                            <span class="label-text text-xs font-semibold text-slate-400 uppercase">Min Year</span>
+            <!-- Price & Year Range Section -->
+            <div class="border-t border-white/15 pt-5">
+                <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Price & Year Range</p>
+                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <!-- Min Year -->
+                    <div class="form-control">
+                        <label class="block mb-2">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Min Year</span>
                         </label>
                         <input
                             type="number"
@@ -167,13 +169,14 @@
                             placeholder="2019"
                             min="2019"
                             max="2026"
-                            class="ui-input text-sm bg-white/5 p-2 border border-white/10 rounded-lg focus:border-cyan-400/50 focus:bg-white/10 transition-all duration-200"
+                            class="w-full px-3 py-2 text-sm bg-white/5 border border-white/15 rounded-lg hover:border-white/25 focus:bg-white/10 focus:border-emerald-400/60 focus:outline-none transition-all duration-200 font-medium placeholder-slate-500"
                         />
                     </div>
 
-                    <div class="form-control p-1">
-                        <label class="label mb-2">
-                            <span class="label-text text-xs font-semibold text-slate-400 uppercase">Max Year</span>
+                    <!-- Max Year -->
+                    <div class="form-control">
+                        <label class="block mb-2">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Max Year</span>
                         </label>
                         <input
                             type="number"
@@ -181,31 +184,33 @@
                             placeholder="2026"
                             min="2019"
                             max="2026"
-                            class="ui-input text-sm bg-white/5 p-2 border border-white/10 rounded-lg focus:border-cyan-400/50 focus:bg-white/10 transition-all duration-200"
+                            class="w-full px-3 py-2 text-sm bg-white/5 border border-white/15 rounded-lg hover:border-white/25 focus:bg-white/10 focus:border-emerald-400/60 focus:outline-none transition-all duration-200 font-medium placeholder-slate-500"
                         />
                     </div>
 
-                    <div class="form-control p-1">
-                        <label class="label mb-2">
-                            <span class="label-text text-xs font-semibold text-slate-400 uppercase">Min Price</span>
+                    <!-- Min Price -->
+                    <div class="form-control">
+                        <label class="block mb-2">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Min Price</span>
                         </label>
                         <input
                             type="number"
                             wire:model.live.debounce.300ms="minPrice"
                             placeholder="500,000"
-                            class="ui-input text-sm bg-white/5 p-2 border border-white/10 rounded-lg focus:border-emerald-400/50 focus:bg-white/10 transition-all duration-200"
+                            class="w-full px-3 py-2 text-sm bg-white/5 border border-white/15 rounded-lg hover:border-white/25 focus:bg-white/10 focus:border-emerald-400/60 focus:outline-none transition-all duration-200 font-medium placeholder-slate-500"
                         />
                     </div>
 
-                    <div class="form-control p-1">
-                        <label class="label mb-2">
-                            <span class="label-text text-xs font-semibold text-slate-400 uppercase">Max Price</span>
+                    <!-- Max Price -->
+                    <div class="form-control">
+                        <label class="block mb-2">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Max Price</span>
                         </label>
                         <input
                             type="number"
                             wire:model.live.debounce.300ms="maxPrice"
                             placeholder="5,000,000"
-                            class="ui-input text-sm bg-white/5 p-2 border border-white/10 rounded-lg focus:border-emerald-400/50 focus:bg-white/10 transition-all duration-200"
+                            class="w-full px-3 py-2 text-sm bg-white/5 border border-white/15 rounded-lg hover:border-white/25 focus:bg-white/10 focus:border-emerald-400/60 focus:outline-none transition-all duration-200 font-medium placeholder-slate-500"
                         />
                     </div>
                 </div>

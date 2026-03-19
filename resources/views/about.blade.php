@@ -11,8 +11,8 @@
                  class="w-full h-full object-cover object-center scale-110 hover:scale-105 transition-transform duration-700"
             />
             {{-- Premium Gradient Overlays with blur --}}
-            <div class="absolute inset-0 bg-linear-to-br from-slate-950/50 via-slate-900/50 to-slate-950/50"></div>
-            <div class="absolute inset-0 bg-linear-to-r from-slate-950/50 via-slate-900/30 to-transparent"></div>
+            <div class="absolute inset-0 bg-linear-to-br from-blue-950/50 via-blue-900/50 to-blue-950/50"></div>
+            <div class="absolute inset-0 bg-linear-to-r from-blue-950/50 via-blue-900/30 to-transparent"></div>
             {{-- Animated radial glows for premium feel --}}
             <div class="absolute top-10 right-20 w-96 h-96 bg-green-400/10 rounded-full filter blur-3xl opacity-40 animate-pulse"></div>
             <div class="absolute bottom-10 left-20 w-80 h-80 bg-blue-400/5 rounded-full filter blur-3xl opacity-30"></div>
@@ -57,7 +57,7 @@
         </div>
 
         {{-- Scroll Indicator with Animation --}}
-        <div class="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+        <div class="absolute bottom-6 sm:bottom-8 left-1/2 transform -tranblue-x-1/2 z-10 animate-bounce">
             <div class="bg-green-400/30 backdrop-blur-sm rounded-full p-3 border border-green-400/50">
                 <ion-icon name="chevron-down-outline" class="text-2xl text-green-300 drop-shadow-lg"></ion-icon>
             </div>
@@ -68,7 +68,7 @@
     <div class="w-full lg:w-3/4 mx-auto px-3 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
         <div class="grid grid-cols-2 lg:grid-cols-6 gap-3 sm:gap-4 lg:gap-5">
             {{-- Stats 1 --}}
-            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-translate-y-1">
+            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-tranblue-y-1">
                 <div class="flex items-center justify-center mb-3">
                     <ion-icon name="build-outline" class="text-3xl text-green-400 group-hover:rotate-12 transition-transform"></ion-icon>
                 </div>
@@ -77,16 +77,16 @@
             </div>
 
             {{-- Stats 2 --}}
-            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-translate-y-1">
+            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-tranblue-y-1">
                 <div class="flex items-center justify-center mb-3">
-                    <ion-icon name="car" class="text-3xl text-green-400 group-hover:translate-x-1 transition-transform"></ion-icon>
+                    <ion-icon name="car" class="text-3xl text-green-400 group-hover:tranblue-x-1 transition-transform"></ion-icon>
                 </div>
                 <p class="text-2xl sm:text-3xl font-bold text-green-400 mb-1">10+</p>
                 <p class="ui-muted text-xs sm:text-sm font-medium">Cars Imported</p>
             </div>
 
             {{-- Stats 3 --}}
-            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-translate-y-1">
+            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-tranblue-y-1">
                 <div class="flex items-center justify-center mb-3">
                     <ion-icon name="happy-outline" class="text-3xl text-green-400 group-hover:scale-110 transition-transform"></ion-icon>
                 </div>
@@ -95,7 +95,7 @@
             </div>
 
             {{-- Stats 4 --}}
-            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-translate-y-1">
+            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-tranblue-y-1">
                 <div class="flex items-center justify-center mb-3">
                     <ion-icon name="briefcase-outline" class="text-3xl text-green-400 group-hover:-rotate-12 transition-transform"></ion-icon>
                 </div>
@@ -104,7 +104,7 @@
             </div>
 
             {{-- Stats 5 --}}
-            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-translate-y-1">
+            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-tranblue-y-1">
                 <div class="flex items-center justify-center mb-3">
                     <ion-icon name="people-outline" class="text-3xl text-green-400 group-hover:scale-125 transition-transform"></ion-icon>
                 </div>
@@ -113,7 +113,7 @@
             </div>
 
             {{-- Stats 6 --}}
-            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-translate-y-1">
+            <div class="glass-panel group hover:border-green-400/60 transition-all p-5 sm:p-6 text-center transform hover:scale-105 hover:-tranblue-y-1">
                 <div class="flex items-center justify-center mb-3">
                     <ion-icon name="navigate-outline" class="text-3xl text-green-400 group-hover:rotate-45 transition-transform"></ion-icon>
                 </div>
@@ -131,23 +131,23 @@
                 alt="Mazda CX-5 background"
                 class="absolute inset-0 h-full w-full object-cover"
             />
-            <div class="absolute inset-0 bg-linear-to-br from-slate-950/50 via-slate-900/50 to-slate-950/50"></div>
-            <div class="absolute inset-0 bg-linear-to-r from-slate-950/50 via-slate-900/30 to-transparent"></div>
+            <div class="absolute inset-0 bg-linear-to-br from-blue-950/50 via-blue-900/50 to-blue-950/50"></div>
+            <div class="absolute inset-0 bg-linear-to-r from-blue-950/50 via-blue-900/30 to-transparent"></div>
 
             <div class="relative z-10 p-6 sm:p-10 lg:p-14">
                 <div class="max-w-4xl text-center lg:text-left">
                     <p class="uppercase tracking-[0.3em] text-xs font-bold text-green-300 mb-3">OUR JOURNEY</p>
                     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 leading-tight text-white">Our Story</h2>
-                    <p class="text-sm sm:text-base leading-relaxed mb-4 text-slate-100/95">
+                    <p class="text-sm sm:text-base leading-relaxed mb-4 text-blue-100/95">
                         Xplore Imports was born out of a simple idea: helping everyday Kenyans find the right cars for their taxi and personal businesses. Over the years, we noticed one common challenge—many people wanted to import cars but didn't know where to start or who to trust.
                     </p>
-                    <p class="text-sm sm:text-base leading-relaxed mb-4 text-slate-100/95">
+                    <p class="text-sm sm:text-base leading-relaxed mb-4 text-blue-100/95">
                         Our mission is to make the car importation journey easy, transparent, and stress-free. We connect clients to quality and affordable cars from Japan, handling everything from sourcing, inspection, shipping, and customs clearance to final delivery straight to your door.
                     </p>
-                    <p class="text-sm sm:text-base leading-relaxed mb-6 text-slate-100/95">
+                    <p class="text-sm sm:text-base leading-relaxed mb-6 text-blue-100/95">
                         Since 2021, we've been offering expert Taxi Business Advising, helping hundreds of drivers and entrepreneurs make smarter car investment decisions. In 2025 we expanded into Car Import Services bringing the same trusted, transparent approach to vehicle sourcing from Japan.
                     </p>
-                    <p class="text-sm sm:text-base leading-relaxed mb-8 text-slate-100/95">
+                    <p class="text-sm sm:text-base leading-relaxed mb-8 text-blue-100/95">
                         We believe in open communication and honesty every step of the way. Clients receive clear updates, transparent costs, and total peace of mind knowing their cars are handled with care.
                     </p>
                     <a href="https://youtu.be/feO-u_WJjog?si=WusDX_6oR6UZO6Ep" target="_blank" class="group inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all transform hover:scale-105">
@@ -169,7 +169,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {{-- Value 1 --}}
-            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-translate-y-2">
+            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-tranblue-y-2">
                 <div class="w-14 h-14 bg-linear-to-br from-green-400 to-green-500 rounded-xl flex items-center justify-center mb-4 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-lg">
                     <ion-icon name="shield-checkmark-outline" class="text-2xl text-black"></ion-icon>
                 </div>
@@ -178,7 +178,7 @@
             </div>
 
             {{-- Value 2 --}}
-            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-translate-y-2">
+            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-tranblue-y-2">
                 <div class="w-14 h-14 bg-linear-to-br from-amber-400 to-amber-500 rounded-xl flex items-center justify-center mb-4 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-lg">
                     <ion-icon name="heart-outline" class="text-2xl text-black"></ion-icon>
                 </div>
@@ -187,7 +187,7 @@
             </div>
 
             {{-- Value 3 --}}
-            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-translate-y-2">
+            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-tranblue-y-2">
                 <div class="w-14 h-14 bg-linear-to-br from-blue-400 to-blue-500 rounded-xl flex items-center justify-center mb-4 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-lg">
                     <ion-icon name="globe-outline" class="text-2xl text-black"></ion-icon>
                 </div>
@@ -196,7 +196,7 @@
             </div>
 
             {{-- Value 4 --}}
-            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-translate-y-2">
+            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-tranblue-y-2">
                 <div class="w-14 h-14 bg-linear-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-lg">
                     <ion-icon name="checkmark-circle-outline" class="text-2xl text-black"></ion-icon>
                 </div>
@@ -205,7 +205,7 @@
             </div>
 
             {{-- Value 5 --}}
-            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-translate-y-2">
+            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-tranblue-y-2">
                 <div class="w-14 h-14 bg-linear-to-br from-indigo-400 to-indigo-500 rounded-xl flex items-center justify-center mb-4 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-lg">
                     <ion-icon name="people-outline" class="text-2xl text-black"></ion-icon>
                 </div>
@@ -214,7 +214,7 @@
             </div>
 
             {{-- Value 6 --}}
-            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-translate-y-2">
+            <div class="group glass-panel p-6 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:scale-105 hover:-tranblue-y-2">
                 <div class="w-14 h-14 bg-linear-to-br from-yellow-400 to-yellow-500 rounded-xl flex items-center justify-center mb-4 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform shadow-lg">
                     <ion-icon name="star-outline" class="text-2xl text-black"></ion-icon>
                 </div>
@@ -234,7 +234,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
             {{-- Benefit 1 --}}
-            <div class="group glass-panel p-7 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:-translate-y-2">
+            <div class="group glass-panel p-7 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:-tranblue-y-2">
                 <div class="flex gap-4 sm:gap-5">
                     <div class="w-12 h-12 bg-linear-to-br from-green-400 to-green-500 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
                         <ion-icon name="cube-outline" class="text-xl text-black"></ion-icon>
@@ -247,7 +247,7 @@
             </div>
 
             {{-- Benefit 2 --}}
-            <div class="group glass-panel p-7 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:-translate-y-2">
+            <div class="group glass-panel p-7 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:-tranblue-y-2">
                 <div class="flex gap-4 sm:gap-5">
                     <div class="w-12 h-12 bg-linear-to-br from-blue-400 to-blue-500 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
                         <ion-icon name="checkmark-done-outline" class="text-xl text-black"></ion-icon>
@@ -260,7 +260,7 @@
             </div>
 
             {{-- Benefit 3 --}}
-            <div class="group glass-panel p-7 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:-translate-y-2">
+            <div class="group glass-panel p-7 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:-tranblue-y-2">
                 <div class="flex gap-4 sm:gap-5">
                     <div class="w-12 h-12 bg-linear-to-br from-amber-400 to-amber-500 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
                         <ion-icon name="person-circle-outline" class="text-xl text-black"></ion-icon>
@@ -273,7 +273,7 @@
             </div>
 
             {{-- Benefit 4 --}}
-            <div class="group glass-panel p-7 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:-translate-y-2">
+            <div class="group glass-panel p-7 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:-tranblue-y-2">
                 <div class="flex gap-4 sm:gap-5">
                     <div class="w-12 h-12 bg-linear-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
                         <ion-icon name="pricetag-outline" class="text-xl text-black"></ion-icon>
@@ -286,7 +286,7 @@
             </div>
 
             {{-- Benefit 5 --}}
-            <div class="group glass-panel p-7 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:-translate-y-2 sm:col-span-2 lg:col-span-1">
+            <div class="group glass-panel p-7 sm:p-8 rounded-2xl hover:border-green-400/60 transition-all transform hover:-tranblue-y-2 sm:col-span-2 lg:col-span-1">
                 <div class="flex gap-4 sm:gap-5">
                     <div class="w-12 h-12 bg-linear-to-br from-purple-400 to-purple-500 rounded-lg flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform shadow-lg">
                         <ion-icon name="rocket-outline" class="text-xl text-black"></ion-icon>
@@ -463,7 +463,7 @@
                      class="w-full h-full object-cover blur-sm opacity-30 group-hover:blur-md group-hover:opacity-40 transition-all duration-500"
                 />
                 <div class="absolute inset-0 bg-linear-to-br from-green-600/90 via-green-500/85 to-emerald-600/90"></div>
-                <div class="absolute inset-0 bg-linear-to-t from-slate-900/40 to-transparent"></div>
+                <div class="absolute inset-0 bg-linear-to-t from-blue-900/40 to-transparent"></div>
             </div>
 
             {{-- Content --}}
@@ -478,7 +478,7 @@
 
                 {{-- CTA Buttons --}}
                 <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center pt-4">
-                    <a href="{{ route('contact') }}" class="group/btn inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-slate-100 text-green-600 font-bold rounded-xl transition-all transform hover:scale-105 shadow-2xl hover:shadow-3xl">
+                    <a href="{{ route('contact') }}" class="group/btn inline-flex items-center justify-center gap-2 px-8 py-4 bg-white hover:bg-blue-100 text-green-600 font-bold rounded-xl transition-all transform hover:scale-105 shadow-2xl hover:shadow-3xl">
                         <ion-icon name="call-outline" class="text-xl group-hover/btn:rotate-12 transition-transform"></ion-icon>
                         <span>Contact Us Now</span>
                     </a>
