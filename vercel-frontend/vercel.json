@@ -11,6 +11,31 @@
       "source": "/terms",
       "destination": "/terms-of-service",
       "permanent": true
+    },
+    {
+      "source": "/inspection",
+      "destination": "/inspection-reports",
+      "permanent": true
+    },
+    {
+      "source": "/shipping",
+      "destination": "/shipping-clearing",
+      "permanent": true
+    },
+    {
+      "source": "/history",
+      "destination": "/vehicle-history",
+      "permanent": true
+    },
+    {
+      "source": "/tradein",
+      "destination": "/trade-in-program",
+      "permanent": true
+    },
+    {
+      "source": "/importation",
+      "destination": "/car-importation",
+      "permanent": true
     }
   ]
 }
